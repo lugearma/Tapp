@@ -1,0 +1,505 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		92193F5A1D178DA700EEED61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92193F591D178DA700EEED61 /* AppDelegate.swift */; };
+		92193F5C1D178DA700EEED61 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92193F5B1D178DA700EEED61 /* ViewController.swift */; };
+		92193F5F1D178DA700EEED61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92193F5D1D178DA700EEED61 /* Main.storyboard */; };
+		92193F611D178DA700EEED61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92193F601D178DA700EEED61 /* Assets.xcassets */; };
+		92193F641D178DA700EEED61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92193F621D178DA700EEED61 /* LaunchScreen.storyboard */; };
+		92193F6F1D178DA700EEED61 /* TappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92193F6E1D178DA700EEED61 /* TappTests.swift */; };
+		92193F7A1D178DA700EEED61 /* TappUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92193F791D178DA700EEED61 /* TappUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		92193F6B1D178DA700EEED61 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 92193F4E1D178DA600EEED61 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 92193F551D178DA600EEED61;
+			remoteInfo = Tapp;
+		};
+		92193F761D178DA700EEED61 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 92193F4E1D178DA600EEED61 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 92193F551D178DA600EEED61;
+			remoteInfo = Tapp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		92193F561D178DA700EEED61 /* Tapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		92193F591D178DA700EEED61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		92193F5B1D178DA700EEED61 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		92193F5E1D178DA700EEED61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		92193F601D178DA700EEED61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		92193F631D178DA700EEED61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		92193F651D178DA700EEED61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92193F6A1D178DA700EEED61 /* TappTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TappTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		92193F6E1D178DA700EEED61 /* TappTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TappTests.swift; sourceTree = "<group>"; };
+		92193F701D178DA700EEED61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92193F751D178DA700EEED61 /* TappUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TappUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		92193F791D178DA700EEED61 /* TappUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TappUITests.swift; sourceTree = "<group>"; };
+		92193F7B1D178DA700EEED61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		92193F531D178DA600EEED61 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92193F671D178DA700EEED61 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92193F721D178DA700EEED61 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		92193F4D1D178DA600EEED61 = {
+			isa = PBXGroup;
+			children = (
+				92193F581D178DA700EEED61 /* Tapp */,
+				92193F6D1D178DA700EEED61 /* TappTests */,
+				92193F781D178DA700EEED61 /* TappUITests */,
+				92193F571D178DA700EEED61 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		92193F571D178DA700EEED61 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				92193F561D178DA700EEED61 /* Tapp.app */,
+				92193F6A1D178DA700EEED61 /* TappTests.xctest */,
+				92193F751D178DA700EEED61 /* TappUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		92193F581D178DA700EEED61 /* Tapp */ = {
+			isa = PBXGroup;
+			children = (
+				92193F591D178DA700EEED61 /* AppDelegate.swift */,
+				92193F5B1D178DA700EEED61 /* ViewController.swift */,
+				92193F5D1D178DA700EEED61 /* Main.storyboard */,
+				92193F601D178DA700EEED61 /* Assets.xcassets */,
+				92193F621D178DA700EEED61 /* LaunchScreen.storyboard */,
+				92193F651D178DA700EEED61 /* Info.plist */,
+			);
+			path = Tapp;
+			sourceTree = "<group>";
+		};
+		92193F6D1D178DA700EEED61 /* TappTests */ = {
+			isa = PBXGroup;
+			children = (
+				92193F6E1D178DA700EEED61 /* TappTests.swift */,
+				92193F701D178DA700EEED61 /* Info.plist */,
+			);
+			path = TappTests;
+			sourceTree = "<group>";
+		};
+		92193F781D178DA700EEED61 /* TappUITests */ = {
+			isa = PBXGroup;
+			children = (
+				92193F791D178DA700EEED61 /* TappUITests.swift */,
+				92193F7B1D178DA700EEED61 /* Info.plist */,
+			);
+			path = TappUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		92193F551D178DA600EEED61 /* Tapp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 92193F7E1D178DA700EEED61 /* Build configuration list for PBXNativeTarget "Tapp" */;
+			buildPhases = (
+				92193F521D178DA600EEED61 /* Sources */,
+				92193F531D178DA600EEED61 /* Frameworks */,
+				92193F541D178DA600EEED61 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Tapp;
+			productName = Tapp;
+			productReference = 92193F561D178DA700EEED61 /* Tapp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		92193F691D178DA700EEED61 /* TappTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 92193F811D178DA700EEED61 /* Build configuration list for PBXNativeTarget "TappTests" */;
+			buildPhases = (
+				92193F661D178DA700EEED61 /* Sources */,
+				92193F671D178DA700EEED61 /* Frameworks */,
+				92193F681D178DA700EEED61 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				92193F6C1D178DA700EEED61 /* PBXTargetDependency */,
+			);
+			name = TappTests;
+			productName = TappTests;
+			productReference = 92193F6A1D178DA700EEED61 /* TappTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		92193F741D178DA700EEED61 /* TappUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 92193F841D178DA700EEED61 /* Build configuration list for PBXNativeTarget "TappUITests" */;
+			buildPhases = (
+				92193F711D178DA700EEED61 /* Sources */,
+				92193F721D178DA700EEED61 /* Frameworks */,
+				92193F731D178DA700EEED61 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				92193F771D178DA700EEED61 /* PBXTargetDependency */,
+			);
+			name = TappUITests;
+			productName = TappUITests;
+			productReference = 92193F751D178DA700EEED61 /* TappUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		92193F4E1D178DA600EEED61 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Luis Arias";
+				TargetAttributes = {
+					92193F551D178DA600EEED61 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					92193F691D178DA700EEED61 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 92193F551D178DA600EEED61;
+					};
+					92193F741D178DA700EEED61 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 92193F551D178DA600EEED61;
+					};
+				};
+			};
+			buildConfigurationList = 92193F511D178DA600EEED61 /* Build configuration list for PBXProject "Tapp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 92193F4D1D178DA600EEED61;
+			productRefGroup = 92193F571D178DA700EEED61 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				92193F551D178DA600EEED61 /* Tapp */,
+				92193F691D178DA700EEED61 /* TappTests */,
+				92193F741D178DA700EEED61 /* TappUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		92193F541D178DA600EEED61 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92193F641D178DA700EEED61 /* LaunchScreen.storyboard in Resources */,
+				92193F611D178DA700EEED61 /* Assets.xcassets in Resources */,
+				92193F5F1D178DA700EEED61 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92193F681D178DA700EEED61 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92193F731D178DA700EEED61 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		92193F521D178DA600EEED61 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92193F5C1D178DA700EEED61 /* ViewController.swift in Sources */,
+				92193F5A1D178DA700EEED61 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92193F661D178DA700EEED61 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92193F6F1D178DA700EEED61 /* TappTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92193F711D178DA700EEED61 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92193F7A1D178DA700EEED61 /* TappUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		92193F6C1D178DA700EEED61 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 92193F551D178DA600EEED61 /* Tapp */;
+			targetProxy = 92193F6B1D178DA700EEED61 /* PBXContainerItemProxy */;
+		};
+		92193F771D178DA700EEED61 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 92193F551D178DA600EEED61 /* Tapp */;
+			targetProxy = 92193F761D178DA700EEED61 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		92193F5D1D178DA700EEED61 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				92193F5E1D178DA700EEED61 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		92193F621D178DA700EEED61 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				92193F631D178DA700EEED61 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		92193F7C1D178DA700EEED61 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		92193F7D1D178DA700EEED61 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		92193F7F1D178DA700EEED61 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Tapp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = mx.com.terco.Tapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		92193F801D178DA700EEED61 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Tapp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = mx.com.terco.Tapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		92193F821D178DA700EEED61 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TappTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = mx.com.terco.TappTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tapp.app/Tapp";
+			};
+			name = Debug;
+		};
+		92193F831D178DA700EEED61 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TappTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = mx.com.terco.TappTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tapp.app/Tapp";
+			};
+			name = Release;
+		};
+		92193F851D178DA700EEED61 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = TappUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = mx.com.terco.TappUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Tapp;
+			};
+			name = Debug;
+		};
+		92193F861D178DA700EEED61 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = TappUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = mx.com.terco.TappUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Tapp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		92193F511D178DA600EEED61 /* Build configuration list for PBXProject "Tapp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92193F7C1D178DA700EEED61 /* Debug */,
+				92193F7D1D178DA700EEED61 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		92193F7E1D178DA700EEED61 /* Build configuration list for PBXNativeTarget "Tapp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92193F7F1D178DA700EEED61 /* Debug */,
+				92193F801D178DA700EEED61 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		92193F811D178DA700EEED61 /* Build configuration list for PBXNativeTarget "TappTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92193F821D178DA700EEED61 /* Debug */,
+				92193F831D178DA700EEED61 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		92193F841D178DA700EEED61 /* Build configuration list for PBXNativeTarget "TappUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92193F851D178DA700EEED61 /* Debug */,
+				92193F861D178DA700EEED61 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 92193F4E1D178DA600EEED61 /* Project object */;
+}
