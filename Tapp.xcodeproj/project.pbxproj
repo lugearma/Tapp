@@ -8,12 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		92193F5A1D178DA700EEED61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92193F591D178DA700EEED61 /* AppDelegate.swift */; };
-		92193F5C1D178DA700EEED61 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92193F5B1D178DA700EEED61 /* ViewController.swift */; };
 		92193F5F1D178DA700EEED61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92193F5D1D178DA700EEED61 /* Main.storyboard */; };
 		92193F611D178DA700EEED61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92193F601D178DA700EEED61 /* Assets.xcassets */; };
 		92193F641D178DA700EEED61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92193F621D178DA700EEED61 /* LaunchScreen.storyboard */; };
 		92193F6F1D178DA700EEED61 /* TappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92193F6E1D178DA700EEED61 /* TappTests.swift */; };
 		92193F7A1D178DA700EEED61 /* TappUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92193F791D178DA700EEED61 /* TappUITests.swift */; };
+		92193F881D17B31F00EEED61 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92193F871D17B31F00EEED61 /* HomeViewController.swift */; };
+		92193F8A1D18B54000EEED61 /* HastagList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92193F891D18B54000EEED61 /* HastagList.swift */; };
+		92193F8C1D18B5ED00EEED61 /* Hastag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92193F8B1D18B5ED00EEED61 /* Hastag.swift */; };
+		92193F8E1D19B16B00EEED61 /* HashtagTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92193F8D1D19B16A00EEED61 /* HashtagTableViewController.swift */; };
+		92193F941D19C5CE00EEED61 /* HashtagCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92193F931D19C5CE00EEED61 /* HashtagCollection.swift */; };
+		92193F961D1A572700EEED61 /* HashtagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92193F951D1A572700EEED61 /* HashtagCollectionViewCell.swift */; };
+		92193F981D1A596500EEED61 /* HashtagCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92193F971D1A596500EEED61 /* HashtagCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +42,6 @@
 /* Begin PBXFileReference section */
 		92193F561D178DA700EEED61 /* Tapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92193F591D178DA700EEED61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		92193F5B1D178DA700EEED61 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		92193F5E1D178DA700EEED61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		92193F601D178DA700EEED61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		92193F631D178DA700EEED61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +52,13 @@
 		92193F751D178DA700EEED61 /* TappUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TappUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		92193F791D178DA700EEED61 /* TappUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TappUITests.swift; sourceTree = "<group>"; };
 		92193F7B1D178DA700EEED61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92193F871D17B31F00EEED61 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		92193F891D18B54000EEED61 /* HastagList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HastagList.swift; sourceTree = "<group>"; };
+		92193F8B1D18B5ED00EEED61 /* Hastag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hastag.swift; sourceTree = "<group>"; };
+		92193F8D1D19B16A00EEED61 /* HashtagTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HashtagTableViewController.swift; sourceTree = "<group>"; };
+		92193F931D19C5CE00EEED61 /* HashtagCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HashtagCollection.swift; sourceTree = "<group>"; };
+		92193F951D1A572700EEED61 /* HashtagCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HashtagCollectionViewCell.swift; sourceTree = "<group>"; };
+		92193F971D1A596500EEED61 /* HashtagCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HashtagCollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +109,18 @@
 		92193F581D178DA700EEED61 /* Tapp */ = {
 			isa = PBXGroup;
 			children = (
+				92193F871D17B31F00EEED61 /* HomeViewController.swift */,
 				92193F591D178DA700EEED61 /* AppDelegate.swift */,
-				92193F5B1D178DA700EEED61 /* ViewController.swift */,
 				92193F5D1D178DA700EEED61 /* Main.storyboard */,
 				92193F601D178DA700EEED61 /* Assets.xcassets */,
 				92193F621D178DA700EEED61 /* LaunchScreen.storyboard */,
 				92193F651D178DA700EEED61 /* Info.plist */,
+				92193F891D18B54000EEED61 /* HastagList.swift */,
+				92193F8B1D18B5ED00EEED61 /* Hastag.swift */,
+				92193F8D1D19B16A00EEED61 /* HashtagTableViewController.swift */,
+				92193F931D19C5CE00EEED61 /* HashtagCollection.swift */,
+				92193F951D1A572700EEED61 /* HashtagCollectionViewCell.swift */,
+				92193F971D1A596500EEED61 /* HashtagCollectionViewController.swift */,
 			);
 			path = Tapp;
 			sourceTree = "<group>";
@@ -256,8 +274,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92193F5C1D178DA700EEED61 /* ViewController.swift in Sources */,
+				92193F8E1D19B16B00EEED61 /* HashtagTableViewController.swift in Sources */,
+				92193F961D1A572700EEED61 /* HashtagCollectionViewCell.swift in Sources */,
 				92193F5A1D178DA700EEED61 /* AppDelegate.swift in Sources */,
+				92193F981D1A596500EEED61 /* HashtagCollectionViewController.swift in Sources */,
+				92193F8A1D18B54000EEED61 /* HastagList.swift in Sources */,
+				92193F881D17B31F00EEED61 /* HomeViewController.swift in Sources */,
+				92193F8C1D18B5ED00EEED61 /* Hastag.swift in Sources */,
+				92193F941D19C5CE00EEED61 /* HashtagCollection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
