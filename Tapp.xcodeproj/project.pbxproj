@@ -20,6 +20,7 @@
 		92193F941D19C5CE00EEED61 /* HashtagCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92193F931D19C5CE00EEED61 /* HashtagCollection.swift */; };
 		92193F961D1A572700EEED61 /* HashtagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92193F951D1A572700EEED61 /* HashtagCollectionViewCell.swift */; };
 		92193F981D1A596500EEED61 /* HashtagCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92193F971D1A596500EEED61 /* HashtagCollectionViewController.swift */; };
+		92193F9C1D1B782100EEED61 /* HashtagTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92193F9B1D1B782000EEED61 /* HashtagTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		92193F931D19C5CE00EEED61 /* HashtagCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HashtagCollection.swift; sourceTree = "<group>"; };
 		92193F951D1A572700EEED61 /* HashtagCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HashtagCollectionViewCell.swift; sourceTree = "<group>"; };
 		92193F971D1A596500EEED61 /* HashtagCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HashtagCollectionViewController.swift; sourceTree = "<group>"; };
+		92193F9B1D1B782000EEED61 /* HashtagTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HashtagTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 				92193F931D19C5CE00EEED61 /* HashtagCollection.swift */,
 				92193F951D1A572700EEED61 /* HashtagCollectionViewCell.swift */,
 				92193F971D1A596500EEED61 /* HashtagCollectionViewController.swift */,
+				92193F9B1D1B782000EEED61 /* HashtagTableViewCell.swift */,
 			);
 			path = Tapp;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92193F9C1D1B782100EEED61 /* HashtagTableViewCell.swift in Sources */,
 				92193F8E1D19B16B00EEED61 /* HashtagTableViewController.swift in Sources */,
 				92193F961D1A572700EEED61 /* HashtagCollectionViewCell.swift in Sources */,
 				92193F5A1D178DA700EEED61 /* AppDelegate.swift in Sources */,
@@ -506,6 +510,7 @@
 				92193F801D178DA700EEED61 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		92193F811D178DA700EEED61 /* Build configuration list for PBXNativeTarget "TappTests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +519,7 @@
 				92193F831D178DA700EEED61 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		92193F841D178DA700EEED61 /* Build configuration list for PBXNativeTarget "TappUITests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +528,7 @@
 				92193F861D178DA700EEED61 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -25,16 +25,15 @@ extension HastagList: UITableViewDataSource {
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         //Later change this line for custom cell
-        let cell = tableView.dequeueReusableCellWithIdentifier(Storyboard.CellIdentifier, forIndexPath: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier(Storyboard.CellIdentifier, forIndexPath: indexPath) as! HashtagTableViewCell
         
         setDataCell(cell, indexPath: indexPath)
         
         return cell
     }
     
-    func setDataCell(cell: UITableViewCell, indexPath: NSIndexPath){
-        let item = hastagList[indexPath.row]
-        cell.textLabel?.text = item.hastagTitle!
-        cell.detailTextLabel?.text  = "\(item.tappsNumber) K Tapps"
+    func setDataCell(cell: HashtagTableViewCell, indexPath: NSIndexPath){
+        let item = hastagList[indexPath.item]
+        cell.hashtag = item
     }
 }
