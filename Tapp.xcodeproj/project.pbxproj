@@ -14,10 +14,8 @@
 		92193F6F1D178DA700EEED61 /* TappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92193F6E1D178DA700EEED61 /* TappTests.swift */; };
 		92193F7A1D178DA700EEED61 /* TappUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92193F791D178DA700EEED61 /* TappUITests.swift */; };
 		92193F881D17B31F00EEED61 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92193F871D17B31F00EEED61 /* HomeViewController.swift */; };
-		92193F8A1D18B54000EEED61 /* HastagList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92193F891D18B54000EEED61 /* HastagList.swift */; };
 		92193F8C1D18B5ED00EEED61 /* Hastag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92193F8B1D18B5ED00EEED61 /* Hastag.swift */; };
 		92193F8E1D19B16B00EEED61 /* HashtagTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92193F8D1D19B16A00EEED61 /* HashtagTableViewController.swift */; };
-		92193F941D19C5CE00EEED61 /* HashtagCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92193F931D19C5CE00EEED61 /* HashtagCollection.swift */; };
 		92193F961D1A572700EEED61 /* HashtagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92193F951D1A572700EEED61 /* HashtagCollectionViewCell.swift */; };
 		92193F981D1A596500EEED61 /* HashtagCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92193F971D1A596500EEED61 /* HashtagCollectionViewController.swift */; };
 		92193F9C1D1B782100EEED61 /* HashtagTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92193F9B1D1B782000EEED61 /* HashtagTableViewCell.swift */; };
@@ -54,10 +52,8 @@
 		92193F791D178DA700EEED61 /* TappUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TappUITests.swift; sourceTree = "<group>"; };
 		92193F7B1D178DA700EEED61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		92193F871D17B31F00EEED61 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		92193F891D18B54000EEED61 /* HastagList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HastagList.swift; sourceTree = "<group>"; };
 		92193F8B1D18B5ED00EEED61 /* Hastag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hastag.swift; sourceTree = "<group>"; };
 		92193F8D1D19B16A00EEED61 /* HashtagTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HashtagTableViewController.swift; sourceTree = "<group>"; };
-		92193F931D19C5CE00EEED61 /* HashtagCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HashtagCollection.swift; sourceTree = "<group>"; };
 		92193F951D1A572700EEED61 /* HashtagCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HashtagCollectionViewCell.swift; sourceTree = "<group>"; };
 		92193F971D1A596500EEED61 /* HashtagCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HashtagCollectionViewController.swift; sourceTree = "<group>"; };
 		92193F9B1D1B782000EEED61 /* HashtagTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HashtagTableViewCell.swift; sourceTree = "<group>"; };
@@ -111,19 +107,12 @@
 		92193F581D178DA700EEED61 /* Tapp */ = {
 			isa = PBXGroup;
 			children = (
-				92193F871D17B31F00EEED61 /* HomeViewController.swift */,
 				92193F591D178DA700EEED61 /* AppDelegate.swift */,
-				92193F5D1D178DA700EEED61 /* Main.storyboard */,
+				92193FA11D1CCCA400EEED61 /* Models */,
+				92193F9D1D1CCC0C00EEED61 /* Source */,
 				92193F601D178DA700EEED61 /* Assets.xcassets */,
 				92193F621D178DA700EEED61 /* LaunchScreen.storyboard */,
 				92193F651D178DA700EEED61 /* Info.plist */,
-				92193F891D18B54000EEED61 /* HastagList.swift */,
-				92193F8B1D18B5ED00EEED61 /* Hastag.swift */,
-				92193F8D1D19B16A00EEED61 /* HashtagTableViewController.swift */,
-				92193F931D19C5CE00EEED61 /* HashtagCollection.swift */,
-				92193F951D1A572700EEED61 /* HashtagCollectionViewCell.swift */,
-				92193F971D1A596500EEED61 /* HashtagCollectionViewController.swift */,
-				92193F9B1D1B782000EEED61 /* HashtagTableViewCell.swift */,
 			);
 			path = Tapp;
 			sourceTree = "<group>";
@@ -144,6 +133,59 @@
 				92193F7B1D178DA700EEED61 /* Info.plist */,
 			);
 			path = TappUITests;
+			sourceTree = "<group>";
+		};
+		92193F9D1D1CCC0C00EEED61 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				92193F9E1D1CCC4500EEED61 /* Home */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		92193F9E1D1CCC4500EEED61 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				92193FA21D1CCCD000EEED61 /* CustomCell */,
+				92193FA01D1CCC6000EEED61 /* Controllers */,
+				92193F9F1D1CCC5800EEED61 /* Views */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		92193F9F1D1CCC5800EEED61 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				92193F5D1D178DA700EEED61 /* Main.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		92193FA01D1CCC6000EEED61 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				92193F871D17B31F00EEED61 /* HomeViewController.swift */,
+				92193F8D1D19B16A00EEED61 /* HashtagTableViewController.swift */,
+				92193F971D1A596500EEED61 /* HashtagCollectionViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		92193FA11D1CCCA400EEED61 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				92193F8B1D18B5ED00EEED61 /* Hastag.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		92193FA21D1CCCD000EEED61 /* CustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				92193F951D1A572700EEED61 /* HashtagCollectionViewCell.swift */,
+				92193F9B1D1B782000EEED61 /* HashtagTableViewCell.swift */,
+			);
+			name = CustomCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,10 +324,8 @@
 				92193F961D1A572700EEED61 /* HashtagCollectionViewCell.swift in Sources */,
 				92193F5A1D178DA700EEED61 /* AppDelegate.swift in Sources */,
 				92193F981D1A596500EEED61 /* HashtagCollectionViewController.swift in Sources */,
-				92193F8A1D18B54000EEED61 /* HastagList.swift in Sources */,
 				92193F881D17B31F00EEED61 /* HomeViewController.swift in Sources */,
 				92193F8C1D18B5ED00EEED61 /* Hastag.swift in Sources */,
-				92193F941D19C5CE00EEED61 /* HashtagCollection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

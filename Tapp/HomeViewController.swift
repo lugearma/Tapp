@@ -18,17 +18,17 @@ class HomeViewController: UIViewController {
     func customizeNavbar(){
         let attributes = [ NSForegroundColorAttributeName: UIColor.whiteColor()]
         let navbar = self.navigationController?.navigationBar
-        let navigationItem = self.navigationItem
+//        let navigationItem = self.navigationItem
         
-        let burgerButton = UIBarButtonItem(title: "Add", style: .Plain ,target: self, action: #selector(addTapped))
-        navigationItem.rightBarButtonItem = burgerButton
+//        let burgerButton = UIBarButtonItem(title: "Add", style: .Plain,target: self, action: #selector(addTapped))
+//        navigationItem.rightBarButtonItem = burgerButton
         
         navbar?.tintColor = UIColor.whiteColor()
         navbar?.barStyle = UIBarStyle.BlackTranslucent
         navbar!.titleTextAttributes = attributes
     }
     
-    func addTapped(){
-        
-    }
+//    func addTapped(){
+//        
+//    }
 }
