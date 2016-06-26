@@ -25,7 +25,7 @@
             </objects>
             <point key="canvasLocation" x="390" y="339"/>
         </scene>
-        <!--Hashtag Table View Controller-->
+        <!--Trends-->
         <scene sceneID="G30-jy-fpR">
             <objects>
                 <tableViewController id="SxZ-2g-Dar" customClass="HashtagTableViewController" customModule="Tapp" customModuleProvider="target" sceneMemberID="viewController">
@@ -33,7 +33,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Busca o crea un #" id="HRm-Tk-Vwj">
+                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Busca o crea un trend" id="eUA-K5-177">
                             <rect key="frame" x="0.0" y="64" width="375" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <textInputTraits key="textInputTraits"/>
@@ -80,10 +80,13 @@
                             <outlet property="delegate" destination="SxZ-2g-Dar" id="hKi-3d-qCU"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="AVs-on-2Ct"/>
+                    <navigationItem key="navigationItem" title="Trends" id="AVs-on-2Ct">
+                        <barButtonItem key="leftBarButtonItem" image="menu" id="rn0-Kq-KG2"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="BKW-pi-JRp"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="hastagTableView" destination="Qeq-1r-7RC" id="H4F-18-fKE"/>
-                        <outlet property="searchBar" destination="HRm-Tk-Vwj" id="haV-PJ-9BM"/>
+                        <outlet property="searchBar" destination="eUA-K5-177" id="VLa-0Y-QYK"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J84-kg-rkG" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -91,4 +94,7 @@
             <point key="canvasLocation" x="969.5" y="338.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="menu" width="22" height="22"/>
+    </resources>
 </document>

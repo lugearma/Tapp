@@ -18,6 +18,7 @@ class HashtagTableViewController: UIViewController {
         super.viewDidLoad()
         setupTableView()
         setupCustomTableViewBackground()
+        customizeNavbar()
         self.searchBar.barStyle = UIBarStyle.Black
         
     }
@@ -26,6 +27,14 @@ class HashtagTableViewController: UIViewController {
         self.hastagTableView.dataSource = self
         self.hastagTableView.delegate = self
         self.hastagTableView.rowHeight = 70
+    }
+    
+    func customizeNavbar(){
+        let attributes = [ NSForegroundColorAttributeName: UIColor.whiteColor()]
+        let navbar = self.navigationController?.navigationBar
+        navbar?.tintColor = UIColor.whiteColor()
+        navbar?.barStyle = UIBarStyle.BlackTranslucent
+        navbar!.titleTextAttributes = attributes
     }
     
     func setupCustomTableViewBackground() {
@@ -56,6 +65,7 @@ class HashtagTableViewController: UIViewController {
 }
 
 extension HashtagTableViewController: UITableViewDelegate {
+    
     //MARK: Delegate Methods
     
     func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
@@ -77,7 +87,7 @@ extension HashtagTableViewController: UITableViewDataSource {
         return cell
     }
     
-    func setDataCell(cell: HashtagTableViewCell, indexPath: NSIndexPath){
+    func setDataCell(cell: HashtagTableViewCell, indexPath: NSIndexPath) {
         let item = hastagList[indexPath.item]
         cell.hashtag = item
     }
