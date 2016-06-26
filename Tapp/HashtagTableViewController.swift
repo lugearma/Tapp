@@ -8,39 +8,46 @@
 
 import UIKit
 
-class HashtagTableViewController: UIViewController{
+class HashtagTableViewController: UIViewController {
     
-//    let hastagList: HastagList = HastagList()
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet var hastagTableView: UITableView!
-    let pinkColor = UIColor(red: (253/255), green: (105.0/255), blue: (154.0/255), alpha: 1.0)
-    let purpleColor = UIColor(red: (103/255), green: (108/255), blue: (251/255), alpha: 1.0)
-    
-    var hastagList: [Hastag] = [Hastag(hastagTitle: "#FelizDiaDelPadre", tappsNumber: 234), Hastag( hastagTitle: "#SoyViejoCuando", tappsNumber: 567), Hastag(hastagTitle:  "#MiNoviaMeOdiaSi", tappsNumber: 564)]
+    var hastagList = Hastag.crateData()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
-        //setTableViewBackgroundGradient(self, pinkColor, purpleColor)
+        setupCustomTableViewBackground()
+        self.searchBar.barStyle = UIBarStyle.Black
+        
     }
     
-    func setupTableView() -> Void{
+    func setupTableView() -> Void {
         self.hastagTableView.dataSource = self
         self.hastagTableView.delegate = self
+        self.hastagTableView.rowHeight = 70
     }
     
-    func setTableViewBackgroundGradient(sender: UITableViewController, _ topColor:UIColor, _ bottomColor:UIColor) {
+    func setupCustomTableViewBackground() {
+        //Create custom view
+        let patternView = UIView(frame: self.hastagTableView.frame)
+        let image = UIImageView(image: UIImage(named: "background"))
         
-        let gradientBackgroundColors = [topColor.CGColor, bottomColor.CGColor]
-        let gradientLocations = [0.0,1.0]
+        //Create blur view
+        let blur = UIBlurEffect(style: UIBlurEffectStyle.Dark)
+        let blurView = UIVisualEffectView(effect: blur)
         
-        let gradientLayer = CAGradientLayer()
-        gradientLayer.colors = gradientBackgroundColors
-        gradientLayer.locations = gradientLocations
+        self.view.bounds = CGRect(x: 0, y: 0, width: self.hastagTableView.frame.size.width, height: self.hastagTableView.frame.size.height)
         
-        gradientLayer.frame = sender.tableView.bounds
-        let backgroundView = UIView(frame: sender.tableView.bounds)
-        backgroundView.layer.insertSublayer(gradientLayer, atIndex: 0)
-        sender.tableView.backgroundView = backgroundView
+        image.frame = self.view.bounds
+        patternView.insertSubview(image, atIndex: 0)
+        patternView.autoresizingMask = UIViewAutoresizing.FlexibleWidth
+        
+        blurView.frame = self.view.bounds
+        patternView.insertSubview(blurView, atIndex: 1)
+        
+        //set backgroundView to tableView
+        self.hastagTableView.backgroundView = patternView
     }
     
     private struct Storyboard {
@@ -63,7 +70,6 @@ extension HashtagTableViewController: UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        //Later change this line for custom cell
         let cell = tableView.dequeueReusableCellWithIdentifier(Storyboard.CellIdentifier, forIndexPath: indexPath) as! HashtagTableViewCell
         
         setDataCell(cell, indexPath: indexPath)

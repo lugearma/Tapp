@@ -16,8 +16,6 @@
 		92193F881D17B31F00EEED61 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92193F871D17B31F00EEED61 /* HomeViewController.swift */; };
 		92193F8C1D18B5ED00EEED61 /* Hastag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92193F8B1D18B5ED00EEED61 /* Hastag.swift */; };
 		92193F8E1D19B16B00EEED61 /* HashtagTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92193F8D1D19B16A00EEED61 /* HashtagTableViewController.swift */; };
-		92193F961D1A572700EEED61 /* HashtagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92193F951D1A572700EEED61 /* HashtagCollectionViewCell.swift */; };
-		92193F981D1A596500EEED61 /* HashtagCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92193F971D1A596500EEED61 /* HashtagCollectionViewController.swift */; };
 		92193F9C1D1B782100EEED61 /* HashtagTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92193F9B1D1B782000EEED61 /* HashtagTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -54,8 +52,6 @@
 		92193F871D17B31F00EEED61 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		92193F8B1D18B5ED00EEED61 /* Hastag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hastag.swift; sourceTree = "<group>"; };
 		92193F8D1D19B16A00EEED61 /* HashtagTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HashtagTableViewController.swift; sourceTree = "<group>"; };
-		92193F951D1A572700EEED61 /* HashtagCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HashtagCollectionViewCell.swift; sourceTree = "<group>"; };
-		92193F971D1A596500EEED61 /* HashtagCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HashtagCollectionViewController.swift; sourceTree = "<group>"; };
 		92193F9B1D1B782000EEED61 /* HashtagTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HashtagTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -166,7 +162,6 @@
 			children = (
 				92193F871D17B31F00EEED61 /* HomeViewController.swift */,
 				92193F8D1D19B16A00EEED61 /* HashtagTableViewController.swift */,
-				92193F971D1A596500EEED61 /* HashtagCollectionViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -182,7 +177,6 @@
 		92193FA21D1CCCD000EEED61 /* CustomCell */ = {
 			isa = PBXGroup;
 			children = (
-				92193F951D1A572700EEED61 /* HashtagCollectionViewCell.swift */,
 				92193F9B1D1B782000EEED61 /* HashtagTableViewCell.swift */,
 			);
 			name = CustomCell;
@@ -321,9 +315,7 @@
 			files = (
 				92193F9C1D1B782100EEED61 /* HashtagTableViewCell.swift in Sources */,
 				92193F8E1D19B16B00EEED61 /* HashtagTableViewController.swift in Sources */,
-				92193F961D1A572700EEED61 /* HashtagCollectionViewCell.swift in Sources */,
 				92193F5A1D178DA700EEED61 /* AppDelegate.swift in Sources */,
-				92193F981D1A596500EEED61 /* HashtagCollectionViewController.swift in Sources */,
 				92193F881D17B31F00EEED61 /* HomeViewController.swift in Sources */,
 				92193F8C1D18B5ED00EEED61 /* Hastag.swift in Sources */,
 			);

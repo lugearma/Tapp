@@ -20,7 +20,7 @@ class HashtagTableViewCell: UITableViewCell{
     }
     
     func updateView() {
-        self.hashtagTitleLabel.text = hashtag.hastagTitle
-        self.numberOfTappsLabel.text = String(hashtag.tappsNumber)
+        self.hashtagTitleLabel.text = hashtag.hastagTitle!
+        self.numberOfTappsLabel.text = "\(String(hashtag.tappsNumber!)) K Tapps"
     }
 }

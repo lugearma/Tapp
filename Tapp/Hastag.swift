@@ -24,4 +24,23 @@ class Hastag{
         self.urlImage = nil
     }
     
+    class func crateData() -> [Hastag] {
+        let hastagList: [Hastag] = [
+            Hastag(hastagTitle: "#FelizDiaDelPadre", tappsNumber: 234),
+            Hastag( hastagTitle: "#SoyViejoCuando", tappsNumber: 567),
+            Hastag(hastagTitle:  "#MiNoviaMeOdiaSi", tappsNumber: 564),
+            Hastag(hastagTitle: "#FelizDiaDelPadre", tappsNumber: 234),
+            Hastag( hastagTitle: "#SoyViejoCuando", tappsNumber: 567),
+            Hastag(hastagTitle:  "#MiNoviaMeOdiaSi", tappsNumber: 564),
+            Hastag(hastagTitle: "#FelizDiaDelPadre", tappsNumber: 234),
+            Hastag( hastagTitle: "#SoyViejoCuando", tappsNumber: 567),
+            Hastag(hastagTitle:  "#MiNoviaMeOdiaSi", tappsNumber: 564),
+            Hastag(hastagTitle: "#FelizDiaDelPadre", tappsNumber: 234),
+            Hastag( hastagTitle: "#SoyViejoCuando", tappsNumber: 567),
+            Hastag(hastagTitle:  "#MiNoviaMeOdiaSi", tappsNumber: 564)
+        ]
+        
+        return hastagList
+
+    }
 }
