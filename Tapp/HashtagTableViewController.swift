@@ -27,6 +27,7 @@ class HashtagTableViewController: UIViewController {
         self.hastagTableView.dataSource = self
         self.hastagTableView.delegate = self
         self.hastagTableView.rowHeight = 70
+        self.hastagTableView.separatorStyle = .None
     }
     
     func customizeNavbar(){

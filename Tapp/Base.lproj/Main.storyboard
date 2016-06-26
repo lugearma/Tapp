@@ -39,7 +39,7 @@
                             <textInputTraits key="textInputTraits"/>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Hastag Cell" rowHeight="70" id="T1V-xS-65n" customClass="HashtagTableViewCell" customModule="Tapp" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Hastag Cell" editingAccessoryType="detailButton" rowHeight="70" id="T1V-xS-65n" customClass="HashtagTableViewCell" customModule="Tapp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="136" width="375" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="T1V-xS-65n" id="M2P-dQ-C7U">
@@ -68,7 +68,7 @@
                                         <constraint firstItem="Mwg-bV-5Xo" firstAttribute="leading" secondItem="M2P-dQ-C7U" secondAttribute="leadingMargin" constant="24" id="xCs-Ag-0QJ"/>
                                     </constraints>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="hashtagTitleLabel" destination="XWv-9a-HAw" id="bbK-Jm-a6R"/>
                                     <outlet property="numberOfTappsLabel" destination="Mwg-bV-5Xo" id="Uir-YN-uLK"/>
