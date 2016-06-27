@@ -17,6 +17,7 @@
 		92193F8C1D18B5ED00EEED61 /* Hastag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92193F8B1D18B5ED00EEED61 /* Hastag.swift */; };
 		92193F8E1D19B16B00EEED61 /* HashtagTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92193F8D1D19B16A00EEED61 /* HashtagTableViewController.swift */; };
 		92193F9C1D1B782100EEED61 /* HashtagTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92193F9B1D1B782000EEED61 /* HashtagTableViewCell.swift */; };
+		92AAD68D1D20DCE6005ECA1C /* HashtagDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AAD68C1D20DCE6005ECA1C /* HashtagDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		92193F8B1D18B5ED00EEED61 /* Hastag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hastag.swift; sourceTree = "<group>"; };
 		92193F8D1D19B16A00EEED61 /* HashtagTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HashtagTableViewController.swift; sourceTree = "<group>"; };
 		92193F9B1D1B782000EEED61 /* HashtagTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HashtagTableViewCell.swift; sourceTree = "<group>"; };
+		92AAD68C1D20DCE6005ECA1C /* HashtagDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HashtagDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +164,7 @@
 			children = (
 				92193F871D17B31F00EEED61 /* HomeViewController.swift */,
 				92193F8D1D19B16A00EEED61 /* HashtagTableViewController.swift */,
+				92AAD68C1D20DCE6005ECA1C /* HashtagDetailViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 			files = (
 				92193F9C1D1B782100EEED61 /* HashtagTableViewCell.swift in Sources */,
 				92193F8E1D19B16B00EEED61 /* HashtagTableViewController.swift in Sources */,
+				92AAD68D1D20DCE6005ECA1C /* HashtagDetailViewController.swift in Sources */,
 				92193F5A1D178DA700EEED61 /* AppDelegate.swift in Sources */,
 				92193F881D17B31F00EEED61 /* HomeViewController.swift in Sources */,
 				92193F8C1D18B5ED00EEED61 /* Hastag.swift in Sources */,

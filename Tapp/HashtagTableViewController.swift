@@ -60,8 +60,19 @@ class HashtagTableViewController: UIViewController {
         self.hastagTableView.backgroundView = patternView
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == Storyboard.SegueHashtagDetailIdentifier{
+            let hashtagDetailView = segue.destinationViewController as! HashtagDetailViewController
+            let indexPath = self.hastagTableView.indexPathForSelectedRow
+            let hashtagTitle = self.hastagList[(indexPath?.item)!].hastagTitle
+            
+            hashtagDetailView.navbarTitle = hashtagTitle!
+        }
+    }
+    
     private struct Storyboard {
         static let CellIdentifier = "Hastag Cell"
+        static let SegueHashtagDetailIdentifier = "HashtagDetail"
     }
 }
 
@@ -71,6 +82,17 @@ extension HashtagTableViewController: UITableViewDelegate {
     
     func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
         cell.backgroundColor = UIColor.clearColor()
+        customSelectedCell(cell)
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        performSegueWithIdentifier(Storyboard.SegueHashtagDetailIdentifier, sender: self)
+    }
+    
+    func customSelectedCell(cell: UITableViewCell) {
+        let selectedBackgroundView = UIView(frame: cell.frame)
+        selectedBackgroundView.backgroundColor = UIColor(red: (46/255), green: (46/255), blue: (46/255), alpha: 0.5)
+        cell.selectedBackgroundView = selectedBackgroundView
     }
 }
 
