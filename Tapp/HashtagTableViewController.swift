@@ -20,7 +20,6 @@ class HashtagTableViewController: UIViewController {
         setupCustomTableViewBackground()
         customizeNavbar()
         self.searchBar.barStyle = UIBarStyle.Black
-        
     }
     
     func setupTableView() -> Void {
@@ -87,6 +86,7 @@ extension HashtagTableViewController: UITableViewDelegate {
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         performSegueWithIdentifier(Storyboard.SegueHashtagDetailIdentifier, sender: self)
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
     
     func customSelectedCell(cell: UITableViewCell) {
