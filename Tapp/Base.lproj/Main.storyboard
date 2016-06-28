@@ -93,6 +93,46 @@
             </objects>
             <point key="canvasLocation" x="969.5" y="338.5"/>
         </scene>
+        <!--Page View Controller-->
+        <scene sceneID="2n3-RF-gPq">
+            <objects>
+                <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="1zS-P2-kY5" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </pageViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oqa-D4-dY3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1949.5" y="-65.5"/>
+        </scene>
+        <!--Page Content View Controller-->
+        <scene sceneID="dwn-4g-K8g">
+            <objects>
+                <viewController storyboardIdentifier="PageContentViewController" id="h3M-K9-Zxx" customClass="PageContentViewController" customModule="Tapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cZb-za-Zh3"/>
+                        <viewControllerLayoutGuide type="bottom" id="zHg-hc-BUB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gm7-V0-rPf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Hj-m9-sZb">
+                                <rect key="frame" x="166" y="323" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="titleLabel" destination="9Hj-m9-sZb" id="ect-oZ-95K"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b2N-yd-im8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1949.5" y="710.5"/>
+        </scene>
         <!--Hashtag Detail View Controller-->
         <scene sceneID="wX4-OG-tr2">
             <objects>
