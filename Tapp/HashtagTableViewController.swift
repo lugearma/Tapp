@@ -12,14 +12,26 @@ class HashtagTableViewController: UIViewController {
     
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet var hastagTableView: UITableView!
-    var hastagList = Hastag.crateData()
+    var hashtagList = Hastag.crateData()
+    var hashtagListFilteredData: [Hastag] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        
+        self.hashtagListFilteredData = self.hashtagList
+        
         setupTableView()
         setupCustomTableViewBackground()
         customizeNavbar()
+        setupSearchBar()
+        addButtonToCreateNewHashtag()
         self.searchBar.barStyle = UIBarStyle.Black
+    }
+    
+    func addButtonToCreateNewHashtag () {
+        
     }
     
     func setupTableView() -> Void {
@@ -27,6 +39,10 @@ class HashtagTableViewController: UIViewController {
         self.hastagTableView.delegate = self
         self.hastagTableView.rowHeight = 70
         self.hastagTableView.separatorStyle = .None
+    }
+    
+    func setupSearchBar() {
+        self.searchBar.delegate = self
     }
     
     func customizeNavbar(){
@@ -63,7 +79,7 @@ class HashtagTableViewController: UIViewController {
         if segue.identifier == Storyboard.SegueHashtagDetailIdentifier{
             let hashtagDetailView = segue.destinationViewController as! HashtagDetailViewController
             let indexPath = self.hastagTableView.indexPathForSelectedRow
-            let hashtagTitle = self.hastagList[(indexPath?.item)!].hastagTitle
+            let hashtagTitle = self.hashtagList[(indexPath?.item)!].hastagTitle
             
             hashtagDetailView.navbarTitle = hashtagTitle!
         }
@@ -75,9 +91,9 @@ class HashtagTableViewController: UIViewController {
     }
 }
 
+
+//MARK: Table View Delegate Methods
 extension HashtagTableViewController: UITableViewDelegate {
-    
-    //MARK: Delegate Methods
     
     func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
         cell.backgroundColor = UIColor.clearColor()
@@ -96,10 +112,14 @@ extension HashtagTableViewController: UITableViewDelegate {
     }
 }
 
+// Table View Data Sourche Methods
 extension HashtagTableViewController: UITableViewDataSource {
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return hastagList.count
+        if self.hashtagListFilteredData.isEmpty{
+            print("Esta vacia")
+        }
+        return self.hashtagListFilteredData.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -111,10 +131,40 @@ extension HashtagTableViewController: UITableViewDataSource {
     }
     
     func setDataCell(cell: HashtagTableViewCell, indexPath: NSIndexPath) {
-        let item = hastagList[indexPath.item]
+        let item = self.hashtagListFilteredData[indexPath.item]
         cell.hashtag = item
     }
 }
+
+// MARK: Search Bar Delegate Methods
+extension HashtagTableViewController: UISearchBarDelegate {
+    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchText.isEmpty {
+            self.hashtagListFilteredData = self.hashtagList
+        } else {
+            self.hashtagListFilteredData = self.hashtagList.filter({
+                (data: Hastag) -> Bool in
+                let title = data.hastagTitle
+                if title?.rangeOfString(searchText) != nil {
+                    return true
+                }
+                return false
+            })
+        }
+        self.hastagTableView.reloadData()
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 

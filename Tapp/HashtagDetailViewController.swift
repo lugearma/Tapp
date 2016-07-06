@@ -11,13 +11,14 @@ import UIKit
 class HashtagDetailViewController: UIViewController {
     
     var navbarTitle = ""
-    let pageTitle = ["1", "2", "3", "4"]
+    let pageTitle = ["1", "2", "3"]
     var pageViewController: UIPageViewController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setTitleNavbar(navbarTitle)
         setupPageViewController()
+        //setupCustomTableViewBackground()
     }
     
     func setupPageViewController() {
