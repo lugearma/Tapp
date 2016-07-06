@@ -30,16 +30,28 @@ class HashtagTableViewController: UIViewController {
     
     func addButtonToCreateNewHashtag () {
         self.hashtagButton = UIButton()
-        hashtagButton.setTitle("Create hash", forState: UIControlState.Normal)
-//        hashtagButton.tintColor = UIColor.redColor()
-        hashtagButton.frame = CGRectMake(20, 20, 160, 40)
-        hashtagButton.addTarget(self, action: #selector(createNewHashtag), forControlEvents: UIControlEvents.TouchUpInside)
-        hashtagButton.hidden = true
+        self.hashtagButton.setTitle("Create hash", forState: UIControlState.Normal)
+        self.hashtagButton.setTitleColor(UIColor.redColor(), forState: UIControlState.Normal)
+        self.hashtagButton.frame = CGRectMake(0, 0, self.view.frame.size.width, 40)
+        self.hashtagButton.addTarget(self, action: #selector(createNewHashtag), forControlEvents: UIControlEvents.TouchUpInside)
+        self.hashtagButton.hidden = true
+        self.hashtagButton.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(hashtagButton)
+        
+        let topContraint = self.hashtagButton.topAnchor.constraintEqualToAnchor(topLayoutGuide.bottomAnchor, constant: 10)
+        let margins = self.view.layoutMarginsGuide
+        let leadingContraint = hashtagButton.leadingAnchor.constraintEqualToAnchor(margins.leadingAnchor)
+        let trailingContraint = hashtagButton.trailingAnchor.constraintEqualToAnchor(margins.trailingAnchor)
+        
+        topContraint.active = true
+        leadingContraint.active = true
+        trailingContraint.active = true
+        
     }
     
     func createNewHashtag() {
         print("Hola, crea el hashtag")
+        
     }
     
     func setupTableView() -> Void {
