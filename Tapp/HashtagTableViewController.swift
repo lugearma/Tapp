@@ -14,24 +14,32 @@ class HashtagTableViewController: UIViewController {
     @IBOutlet var hastagTableView: UITableView!
     var hashtagList = Hastag.crateData()
     var hashtagListFilteredData: [Hastag] = []
+    var hashtagButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
         self.hashtagListFilteredData = self.hashtagList
-        
+        addButtonToCreateNewHashtag ()
         setupTableView()
         setupCustomTableViewBackground()
         customizeNavbar()
         setupSearchBar()
-        addButtonToCreateNewHashtag()
         self.searchBar.barStyle = UIBarStyle.Black
     }
     
     func addButtonToCreateNewHashtag () {
-        
+        self.hashtagButton = UIButton()
+        hashtagButton.setTitle("Create hash", forState: UIControlState.Normal)
+//        hashtagButton.tintColor = UIColor.redColor()
+        hashtagButton.frame = CGRectMake(20, 20, 160, 40)
+        hashtagButton.addTarget(self, action: #selector(createNewHashtag), forControlEvents: UIControlEvents.TouchUpInside)
+        hashtagButton.hidden = true
+        self.view.addSubview(hashtagButton)
+    }
+    
+    func createNewHashtag() {
+        print("Hola, crea el hashtag")
     }
     
     func setupTableView() -> Void {
@@ -117,8 +125,10 @@ extension HashtagTableViewController: UITableViewDataSource {
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if self.hashtagListFilteredData.isEmpty{
-            print("Esta vacia")
+            self.hashtagButton.hidden = false
+            return 0
         }
+        self.hashtagButton.hidden = true
         return self.hashtagListFilteredData.count
     }
     
