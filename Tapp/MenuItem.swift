@@ -20,10 +20,10 @@ class MenuItem: NSObject {
     
     class func createItems() -> [MenuItem]{
         return [
-            MenuItem(title: "item 1", image: UIImage(named: "bell")!),
-            MenuItem(title: "item 2", image: UIImage(named: "bell")!),
-            MenuItem(title: "item 3", image: UIImage(named: "bell")!),
-            MenuItem(title: "item 4", image: UIImage(named: "bell")!)
+            MenuItem(title: "Configuracion", image: UIImage(named: "bell")!),
+            MenuItem(title: "Mensajes", image: UIImage(named: "bell")!),
+            MenuItem(title: "Perfil", image: UIImage(named: "bell")!),
+            MenuItem(title: "Notificaciones", image: UIImage(named: "bell")!)
         ]
     }
 }

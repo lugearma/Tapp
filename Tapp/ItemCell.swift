@@ -14,6 +14,7 @@ class ItemCell: UITableViewCell {
     @IBOutlet weak var itemLabel: UILabel!
     
     func configureCellForItem(item: MenuItem) {
+        self.itemLabel.textColor = UIColor.whiteColor()
         self.itemLabel.text = item.itemTitle
         self.itemImage.image = item.itemImage
     }
