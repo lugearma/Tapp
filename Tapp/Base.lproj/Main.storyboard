@@ -25,10 +25,93 @@
             </objects>
             <point key="canvasLocation" x="390" y="339"/>
         </scene>
+        <!--Menu Panel View Controller-->
+        <scene sceneID="KaH-LT-MGq">
+            <objects>
+                <viewController storyboardIdentifier="SidePanelViewController" id="xEm-wg-zl8" customClass="MenuPanelViewController" customModule="Tapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5lt-Lm-pfH"/>
+                        <viewControllerLayoutGuide type="bottom" id="SPC-eW-cdJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ei4-A9-ZL5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="79" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IS9-lR-IwP">
+                                <rect key="frame" x="0.0" y="304" width="375" height="363"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="79" id="YaE-O8-A2w" customClass="ItemCell" customModule="Tapp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="79"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YaE-O8-A2w" id="Rid-4l-h6u">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="78"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vcr-J2-T4c">
+                                                    <rect key="frame" x="8" y="0.0" width="108" height="78"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iEv-pQ-Wy3">
+                                                    <rect key="frame" x="141" y="28" width="226" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="itemImage" destination="Vcr-J2-T4c" id="YCg-8n-cnl"/>
+                                            <outlet property="itemLabel" destination="iEv-pQ-Wy3" id="rnc-Ra-gWP"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fvh-Mb-6di">
+                                <rect key="frame" x="0.0" y="20" width="375" height="244"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="menuBackgroundProfile" translatesAutoresizingMaskIntoConstraints="NO" id="BSV-oF-Y7F">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="244"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="K9S-nl-PIq">
+                                        <rect key="frame" x="137" y="31" width="100" height="100"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Jose el Chulo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2gl-Ya-NrP">
+                                        <rect key="frame" x="136" y="139" width="103" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TAPPS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LfW-a8-BU6">
+                                        <rect key="frame" x="161" y="174" width="52" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="523" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xs1-if-qtL">
+                                        <rect key="frame" x="172" y="195" width="31" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="tableView" destination="IS9-lR-IwP" id="fGT-zQ-HLX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="25I-JG-WTM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="969.5" y="-404.5"/>
+        </scene>
         <!--Trends-->
         <scene sceneID="G30-jy-fpR">
             <objects>
-                <tableViewController id="SxZ-2g-Dar" customClass="HashtagTableViewController" customModule="Tapp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="HashtagTableViewController" id="SxZ-2g-Dar" customClass="HashtagTableViewController" customModule="Tapp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Qeq-1r-7RC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -82,7 +165,12 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Trends" id="AVs-on-2Ct">
-                        <barButtonItem key="leftBarButtonItem" image="menu" id="rn0-Kq-KG2"/>
+                        <barButtonItem key="leftBarButtonItem" image="menu" id="rn0-Kq-KG2">
+                            <connections>
+                                <action selector="toggleMenu:" destination="SxZ-2g-Dar" id="JTN-aq-B4M"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="DOX-Vx-MJQ"/>
                     </navigationItem>
                     <connections>
                         <outlet property="hastagTableView" destination="Qeq-1r-7RC" id="H4F-18-fKE"/>
@@ -153,6 +241,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="avatar" width="2091" height="2091"/>
         <image name="menu" width="22" height="22"/>
+        <image name="menuBackgroundProfile" width="2083" height="2083"/>
     </resources>
 </document>

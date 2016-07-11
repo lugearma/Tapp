@@ -8,6 +8,12 @@
 
 import UIKit
 
+@objc
+protocol HashtagTableViewControllerDelegate {
+    optional func togglePanel()
+    optional func collapseMenuPanel()
+}
+
 class HashtagTableViewController: UIViewController {
     
     @IBOutlet weak var searchBar: UISearchBar!
@@ -15,6 +21,7 @@ class HashtagTableViewController: UIViewController {
     var hashtagList = Hastag.crateData()
     var hashtagListFilteredData: [Hastag] = []
     var hashtagButton: UIButton!
+    var delegate: HashtagTableViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,10 +35,14 @@ class HashtagTableViewController: UIViewController {
         self.searchBar.barStyle = UIBarStyle.Black
     }
     
+    @IBAction func toggleMenu(sender: UIBarButtonItem) {
+        delegate?.togglePanel!()
+    }
+    
     func addButtonToCreateNewHashtag () {
         self.hashtagButton = UIButton()
         self.hashtagButton.setTitle("Create hash", forState: UIControlState.Normal)
-        self.hashtagButton.setTitleColor(UIColor.redColor(), forState: UIControlState.Normal)
+        self.hashtagButton.setTitleColor(UIColor(red: 14/225, green: 122/255, blue: 1.0, alpha: 1.0), forState: UIControlState.Normal)
         self.hashtagButton.frame = CGRectMake(0, 0, self.view.frame.size.width, 40)
         self.hashtagButton.addTarget(self, action: #selector(createNewHashtag), forControlEvents: UIControlEvents.TouchUpInside)
         self.hashtagButton.hidden = true
