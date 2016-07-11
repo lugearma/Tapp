@@ -17,6 +17,4 @@ class ItemCell: UITableViewCell {
         self.itemLabel.text = item.itemTitle
         self.itemImage.image = item.itemImage
     }
-    
-
 }

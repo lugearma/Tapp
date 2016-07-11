@@ -17,21 +17,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
+        UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent
+        
+        configureMainScreen()
+        
         pageControl = UIPageControl.appearance()
         pageControl.pageIndicatorTintColor = UIColor.lightGrayColor()
         pageControl.currentPageIndicatorTintColor = UIColor.darkGrayColor()
         pageControl.backgroundColor = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.0)
         
-        configureMainScreen()
-        
         return true
     }
     
     func configureMainScreen() {
-        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
         let containerViewController = ContainerViewController()
         
-        
+        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
         self.window?.rootViewController = containerViewController
         self.window?.makeKeyAndVisible()
     }

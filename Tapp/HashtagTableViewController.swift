@@ -27,12 +27,14 @@ class HashtagTableViewController: UIViewController {
         super.viewDidLoad()
         
         self.hashtagListFilteredData = self.hashtagList
-        addButtonToCreateNewHashtag ()
+        addButtonToCreateNewHashtag()
         setupTableView()
         setupCustomTableViewBackground()
         customizeNavbar()
         setupSearchBar()
         self.searchBar.barStyle = UIBarStyle.Black
+        
+//        UIViewController.preferredStatusBarStyle()
     }
     
     @IBAction func toggleMenu(sender: UIBarButtonItem) {
