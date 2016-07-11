@@ -24,8 +24,7 @@ class MenuPanelViewController: UIViewController {
     }
     
     override func viewDidLoad() {
-        self.viewDidLoad()
-        
+        super.viewDidLoad()
         self.tableView.reloadData()
         self.setupTableView()
     }

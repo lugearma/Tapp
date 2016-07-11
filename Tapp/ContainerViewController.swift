@@ -53,7 +53,7 @@ extension ContainerViewController: HashtagTableViewControllerDelegate {
     func addMenuViewController() {
         if menuPanelViewController == nil {
             menuPanelViewController = UIStoryboard.menuPanelViewController()
-            menuPanelViewController.items = ["Item 1", "Item 2", "Item 3", "Item 4"]
+            menuPanelViewController.items = MenuItem.createItems()
             
             addChildMenuPanelViewController(menuPanelViewController)
         }
