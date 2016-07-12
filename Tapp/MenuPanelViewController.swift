@@ -16,6 +16,7 @@ class MenuPanelViewController: UIViewController {
     
     var items: [MenuItem]?
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var backgroundProfileImage: UIImageView!
     
     struct TableView {
         struct CellIdentifiers {
@@ -27,6 +28,8 @@ class MenuPanelViewController: UIViewController {
         super.viewDidLoad()
         self.tableView.reloadData()
         self.setupTableView()
+        
+        setTableViewBackgroundGradient(UIColor(red: 15/255, green: 30/255, blue: 30/255, alpha: 1.0), UIColor.blackColor())
     }
     
     func setupTableView(){
@@ -34,6 +37,21 @@ class MenuPanelViewController: UIViewController {
         self.tableView.dataSource = self
         self.tableView.backgroundColor = UIColor.redColor()
         self.tableView.rowHeight = 70
+    }
+    
+    func setTableViewBackgroundGradient(topColor: UIColor, _ bottomColor: UIColor) {
+        
+        let gradientBackgroundColors = [topColor.CGColor, bottomColor.CGColor]
+        let gradientLocations = [0.0,1.0]
+        
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.colors = gradientBackgroundColors
+        gradientLayer.locations = gradientLocations
+        
+        gradientLayer.frame = self.tableView.bounds
+        let backgroundView = UIView(frame: self.tableView.bounds)
+        backgroundView.layer.insertSublayer(gradientLayer, atIndex: 0)
+        self.tableView.backgroundView = backgroundView
     }
     
 }
