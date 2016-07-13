@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9210021D1D349F9500B6A931 /* AddHashtagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9210021C1D349F9500B6A931 /* AddHashtagViewController.swift */; };
 		92193F5A1D178DA700EEED61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92193F591D178DA700EEED61 /* AppDelegate.swift */; };
 		92193F5F1D178DA700EEED61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92193F5D1D178DA700EEED61 /* Main.storyboard */; };
 		92193F611D178DA700EEED61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92193F601D178DA700EEED61 /* Assets.xcassets */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9210021C1D349F9500B6A931 /* AddHashtagViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddHashtagViewController.swift; sourceTree = "<group>"; };
 		92193F561D178DA700EEED61 /* Tapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92193F591D178DA700EEED61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92193F5E1D178DA700EEED61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -88,6 +90,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9210021B1D349F4000B6A931 /* AddTrend */ = {
+			isa = PBXGroup;
+			children = (
+				92D3F04A1D35F76100DA9C33 /* Controllers */,
+			);
+			name = AddTrend;
+			sourceTree = "<group>";
+		};
 		92193F4D1D178DA600EEED61 = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +152,7 @@
 		92193F9D1D1CCC0C00EEED61 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				9210021B1D349F4000B6A931 /* AddTrend */,
 				9237C0281D2CBC3F00E7224F /* Menu */,
 				92AAD68E1D21DD7F005ECA1C /* Play */,
 				92193F9E1D1CCC4500EEED61 /* Home */,
@@ -226,6 +237,14 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
+		92D3F04A1D35F76100DA9C33 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9210021C1D349F9500B6A931 /* AddHashtagViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -294,6 +313,7 @@
 				TargetAttributes = {
 					92193F551D178DA600EEED61 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = G9KYNT8JLN;
 					};
 					92193F691D178DA700EEED61 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -358,6 +378,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				92193F9C1D1B782100EEED61 /* HashtagTableViewCell.swift in Sources */,
+				9210021D1D349F9500B6A931 /* AddHashtagViewController.swift in Sources */,
 				92193F8E1D19B16B00EEED61 /* HashtagTableViewController.swift in Sources */,
 				9237C0331D3339E500E7224F /* ItemCell.swift in Sources */,
 				9237C02C1D2CBD1300E7224F /* ContainerViewController.swift in Sources */,
@@ -507,10 +528,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Tapp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mx.com.terco.Tapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -518,10 +542,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Tapp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mx.com.terco.Tapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

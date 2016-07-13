@@ -162,6 +162,47 @@
             </objects>
             <point key="canvasLocation" x="969.5" y="-404.5"/>
         </scene>
+        <!--Add Hashtag View Controller-->
+        <scene sceneID="fhC-I5-rmN">
+            <objects>
+                <viewController id="gn3-Rr-FmL" customClass="AddHashtagViewController" customModule="Tapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="82h-3a-bVq"/>
+                        <viewControllerLayoutGuide type="bottom" id="M0x-mb-ROb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5EJ-DI-cqB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="oFP-40-GNk">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qHB-kJ-VCI">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="Xn1-Sr-sqb">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="dark"/>
+                            </visualEffectView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Add new trend" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bu8-Lx-NgY">
+                                <rect key="frame" x="91" y="319" width="193" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="addNewTrendTextField" destination="Bu8-Lx-NgY" id="aCc-QT-SW2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="He7-Qq-jui" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1504.5" y="-32.5"/>
+        </scene>
         <!--Trends-->
         <scene sceneID="G30-jy-fpR">
             <objects>
@@ -224,7 +265,11 @@
                                 <action selector="toggleMenu:" destination="SxZ-2g-Dar" id="JTN-aq-B4M"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="DOX-Vx-MJQ"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="DOX-Vx-MJQ">
+                            <connections>
+                                <segue destination="gn3-Rr-FmL" kind="presentation" identifier="AddHashtag" id="BFv-Oc-LEn"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="hastagTableView" destination="Qeq-1r-7RC" id="H4F-18-fKE"/>
@@ -251,11 +296,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WmA-qc-ZKj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1459.5" y="338.5"/>
+            <point key="canvasLocation" x="1513.5" y="706.5"/>
         </scene>
     </scenes>
     <resources>
         <image name="avatar" width="2091" height="2091"/>
+        <image name="background" width="768" height="1024"/>
         <image name="menu" width="22" height="22"/>
         <image name="menuBackgroundProfile" width="2083" height="2083"/>
     </resources>

@@ -109,18 +109,32 @@ class HashtagTableViewController: UIViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == Storyboard.SegueHashtagDetailIdentifier{
+        switch segue.identifier {
+        case Storyboard.SegueHashtagDetailIdentifier?:
             let hashtagDetailView = segue.destinationViewController as! HashtagDetailViewController
             let indexPath = self.hastagTableView.indexPathForSelectedRow
             let hashtagTitle = self.hashtagList[(indexPath?.item)!].hastagTitle
             
             hashtagDetailView.navbarTitle = hashtagTitle!
+        case Storyboard.SegueAddHashtag?:
+            let addHashtagView = segue.destinationViewController as! AddHashtagViewController
+            addHashtagView.navbarTitle = "Add new trend"
+        default:
+            print("Error")
         }
+//        if segue.identifier == Storyboard.SegueHashtagDetailIdentifier{
+//            let hashtagDetailView = segue.destinationViewController as! HashtagDetailViewController
+//            let indexPath = self.hastagTableView.indexPathForSelectedRow
+//            let hashtagTitle = self.hashtagList[(indexPath?.item)!].hastagTitle
+//            
+//            hashtagDetailView.navbarTitle = hashtagTitle!
+//        }
     }
     
     private struct Storyboard {
         static let CellIdentifier = "Hastag Cell"
         static let SegueHashtagDetailIdentifier = "HashtagDetail"
+        static let SegueAddHashtag = "AddHashtag"
     }
 }
 
