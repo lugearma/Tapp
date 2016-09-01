@@ -21,6 +21,7 @@
 		9237C02E1D2E95F100E7224F /* MenuPanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9237C02D1D2E95F100E7224F /* MenuPanelViewController.swift */; };
 		9237C0331D3339E500E7224F /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9237C0321D3339E500E7224F /* ItemCell.swift */; };
 		9237C0351D333B4600E7224F /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9237C0341D333B4600E7224F /* MenuItem.swift */; };
+		925134F41D375CE1006D3C1A /* WriteNewHashtagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925134F31D375CE1006D3C1A /* WriteNewHashtagViewController.swift */; };
 		92AAD68D1D20DCE6005ECA1C /* HashtagDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AAD68C1D20DCE6005ECA1C /* HashtagDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +63,7 @@
 		9237C02D1D2E95F100E7224F /* MenuPanelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuPanelViewController.swift; sourceTree = "<group>"; };
 		9237C0321D3339E500E7224F /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		9237C0341D333B4600E7224F /* MenuItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
+		925134F31D375CE1006D3C1A /* WriteNewHashtagViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WriteNewHashtagViewController.swift; sourceTree = "<group>"; };
 		92AAD68C1D20DCE6005ECA1C /* HashtagDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HashtagDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -152,6 +154,7 @@
 		92193F9D1D1CCC0C00EEED61 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				925134F11D375CAE006D3C1A /* WriteNewTrend */,
 				9210021B1D349F4000B6A931 /* AddTrend */,
 				9237C0281D2CBC3F00E7224F /* Menu */,
 				92AAD68E1D21DD7F005ECA1C /* Play */,
@@ -211,6 +214,22 @@
 				9237C0341D333B4600E7224F /* MenuItem.swift */,
 			);
 			name = Menu;
+			sourceTree = "<group>";
+		};
+		925134F11D375CAE006D3C1A /* WriteNewTrend */ = {
+			isa = PBXGroup;
+			children = (
+				925134F21D375CC1006D3C1A /* Controllers */,
+			);
+			name = WriteNewTrend;
+			sourceTree = "<group>";
+		};
+		925134F21D375CC1006D3C1A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				925134F31D375CE1006D3C1A /* WriteNewHashtagViewController.swift */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 		92AAD68E1D21DD7F005ECA1C /* Play */ = {
@@ -384,6 +403,7 @@
 				9237C02C1D2CBD1300E7224F /* ContainerViewController.swift in Sources */,
 				92AAD68D1D20DCE6005ECA1C /* HashtagDetailViewController.swift in Sources */,
 				9237C02E1D2E95F100E7224F /* MenuPanelViewController.swift in Sources */,
+				925134F41D375CE1006D3C1A /* WriteNewHashtagViewController.swift in Sources */,
 				92193F5A1D178DA700EEED61 /* AppDelegate.swift in Sources */,
 				92193F8C1D18B5ED00EEED61 /* Hastag.swift in Sources */,
 				9237C0351D333B4600E7224F /* MenuItem.swift in Sources */,

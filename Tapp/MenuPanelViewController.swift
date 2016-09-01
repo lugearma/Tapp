@@ -56,6 +56,8 @@ class MenuPanelViewController: UIViewController {
     
 }
 
+// MARK: - UITableViewDataSource
+
 extension MenuPanelViewController: UITableViewDataSource {
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
