@@ -9,14 +9,11 @@
 import UIKit
 
 class WriteNewHashtagViewController: UIViewController {
-
-    
-    @IBOutlet weak var newContentHashtagTextView: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.newContentHashtagTextView.backgroundColor = UIColor.redColor().colorWithAlphaComponent(0.5)
+//        self.newContentHashtagTextView.backgroundColor = UIColor.redColor().colorWithAlphaComponent(0.5)
     }
     
     func setupCustomTableViewBackground() {

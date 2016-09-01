@@ -11,19 +11,30 @@ import UIKit
 class AddHashtagViewController: UIViewController {
     
     var navbarTitle = ""
-    @IBOutlet weak var addNewTrendTextField: UITextField!
+    
+    @IBOutlet var textView: UITextView!
+    @IBOutlet var createButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.textView.delegate = self
+        self.textView.text = "Add a new tred"
+        self.textView.textColor = UIColor.lightGrayColor()
         setTitleNavbar(navbarTitle)
-        addBorderBottomToTextField(addNewTrendTextField)
-        putWhiteColorToPlaceholderText(addNewTrendTextField)
         addnavBar()
+        addGesture()
+    }
+    
+    func addGesture() {
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(AddHashtagViewController.hideKeyboard)))
+    }
+    
+    func hideKeyboard() {
+        self.textView.resignFirstResponder()
     }
     
     func addnavBar() {
-        
         var itemsArray: [UINavigationItem] = []
         let itemOne = UINavigationItem()
         itemOne.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "delete"), style: .Plain, target: nil, action: #selector(AddHashtagViewController.hideModalView(_:)))
@@ -43,21 +54,32 @@ class AddHashtagViewController: UIViewController {
     func hideModalView(sender: UIBarButtonItem) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
-    
-    func addBorderBottomToTextField(textField: UITextField) {
-        let bottomBorder = CALayer()
-        bottomBorder.frame = CGRectMake(0.0, textField.frame.size.height - 1, textField.frame.size.width, 1.0);
-        bottomBorder.backgroundColor = UIColor.whiteColor().CGColor
-        textField.layer.addSublayer(bottomBorder)
-    }
-    
-    
-    func putWhiteColorToPlaceholderText(textField: UITextField) {
-        let attributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
-        textField.attributedPlaceholder = NSAttributedString(string: "Add new trend", attributes:attributes)
-    }
-    
+
     func setTitleNavbar(title: String) {
         self.title = title
+    }
+}
+
+extension AddHashtagViewController: UITextViewDelegate {
+    
+    func textViewShouldBeginEditing(textView: UITextView) -> Bool {
+        
+        textView.text = ""
+        textView.textColor = UIColor.whiteColor()
+        
+        return true
+    }
+    
+    func textFieldShouldEndEditing(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    func textViewDidChange(textView: UITextView) {
+        
+        if (textView.text == "") {
+            textView.text = "Add a new tred"
+            textView.textColor = UIColor.lightGrayColor()
+        }
     }
 }
