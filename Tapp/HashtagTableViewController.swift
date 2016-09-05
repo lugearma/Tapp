@@ -90,10 +90,12 @@ class HashtagTableViewController: UIViewController {
         //Create custom view
         let patternView = UIView(frame: self.hastagTableView.frame)
         let image = UIImageView(image: UIImage(named: "background"))
+        image.contentMode = .ScaleAspectFill
         
         //Create blur view
         let blur = UIBlurEffect(style: UIBlurEffectStyle.Dark)
         let blurView = UIVisualEffectView(effect: blur)
+//        blurView.alpha = 0.9
         
         self.view.bounds = CGRect(x: 0, y: 0, width: self.hastagTableView.frame.size.width, height: self.hastagTableView.frame.size.height)
         
