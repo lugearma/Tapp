@@ -22,17 +22,17 @@ class WriteNewHashtagViewController: UIViewController {
         let image = UIImageView(image: UIImage(named: "background"))
         
         //Create blur view
-        let blur = UIBlurEffect(style: UIBlurEffectStyle.Dark)
+        let blur = UIBlurEffect(style: UIBlurEffectStyle.dark)
         let blurView = UIVisualEffectView(effect: blur)
         
         self.view.bounds = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height)
         
         image.frame = self.view.bounds
-        patternView.insertSubview(image, atIndex: 0)
-        patternView.autoresizingMask = UIViewAutoresizing.FlexibleWidth
+        patternView.insertSubview(image, at: 0)
+        patternView.autoresizingMask = UIViewAutoresizing.flexibleWidth
         
         blurView.frame = self.view.bounds
-        patternView.insertSubview(blurView, atIndex: 1)
+        patternView.insertSubview(blurView, at: 1)
         
         //set backgroundView to tableView
         self.view.addSubview(patternView)

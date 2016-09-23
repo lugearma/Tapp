@@ -15,14 +15,13 @@
 		92193F6F1D178DA700EEED61 /* TappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92193F6E1D178DA700EEED61 /* TappTests.swift */; };
 		92193F7A1D178DA700EEED61 /* TappUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92193F791D178DA700EEED61 /* TappUITests.swift */; };
 		92193F8C1D18B5ED00EEED61 /* Hastag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92193F8B1D18B5ED00EEED61 /* Hastag.swift */; };
-		92193F8E1D19B16B00EEED61 /* HashtagTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92193F8D1D19B16A00EEED61 /* HashtagTableViewController.swift */; };
-		92193F9C1D1B782100EEED61 /* HashtagTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92193F9B1D1B782000EEED61 /* HashtagTableViewCell.swift */; };
+		921B6C361D9434D7009CAB6A /* InteractViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921B6C351D9434D7009CAB6A /* InteractViewController.swift */; };
 		9237C02C1D2CBD1300E7224F /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9237C02B1D2CBD1300E7224F /* ContainerViewController.swift */; };
 		9237C02E1D2E95F100E7224F /* MenuPanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9237C02D1D2E95F100E7224F /* MenuPanelViewController.swift */; };
 		9237C0331D3339E500E7224F /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9237C0321D3339E500E7224F /* ItemCell.swift */; };
 		9237C0351D333B4600E7224F /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9237C0341D333B4600E7224F /* MenuItem.swift */; };
 		925134F41D375CE1006D3C1A /* WriteNewHashtagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925134F31D375CE1006D3C1A /* WriteNewHashtagViewController.swift */; };
-		92AAD68D1D20DCE6005ECA1C /* HashtagDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AAD68C1D20DCE6005ECA1C /* HashtagDetailViewController.swift */; };
+		9281658C1D81ACE300EBF05D /* TrendCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9281658B1D81ACE300EBF05D /* TrendCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,14 +56,13 @@
 		92193F791D178DA700EEED61 /* TappUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TappUITests.swift; sourceTree = "<group>"; };
 		92193F7B1D178DA700EEED61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		92193F8B1D18B5ED00EEED61 /* Hastag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hastag.swift; sourceTree = "<group>"; };
-		92193F8D1D19B16A00EEED61 /* HashtagTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HashtagTableViewController.swift; sourceTree = "<group>"; };
-		92193F9B1D1B782000EEED61 /* HashtagTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HashtagTableViewCell.swift; sourceTree = "<group>"; };
+		921B6C351D9434D7009CAB6A /* InteractViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractViewController.swift; sourceTree = "<group>"; };
 		9237C02B1D2CBD1300E7224F /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		9237C02D1D2E95F100E7224F /* MenuPanelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuPanelViewController.swift; sourceTree = "<group>"; };
 		9237C0321D3339E500E7224F /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		9237C0341D333B4600E7224F /* MenuItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 		925134F31D375CE1006D3C1A /* WriteNewHashtagViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WriteNewHashtagViewController.swift; sourceTree = "<group>"; };
-		92AAD68C1D20DCE6005ECA1C /* HashtagDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HashtagDetailViewController.swift; sourceTree = "<group>"; };
+		9281658B1D81ACE300EBF05D /* TrendCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrendCollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,20 +155,19 @@
 				925134F11D375CAE006D3C1A /* WriteNewTrend */,
 				9210021B1D349F4000B6A931 /* AddTrend */,
 				9237C0281D2CBC3F00E7224F /* Menu */,
-				92AAD68E1D21DD7F005ECA1C /* Play */,
-				92193F9E1D1CCC4500EEED61 /* Home */,
+				92AAD68E1D21DD7F005ECA1C /* InteractTrend */,
+				92193F9E1D1CCC4500EEED61 /* TopTrends */,
 			);
 			name = Source;
 			sourceTree = "<group>";
 		};
-		92193F9E1D1CCC4500EEED61 /* Home */ = {
+		92193F9E1D1CCC4500EEED61 /* TopTrends */ = {
 			isa = PBXGroup;
 			children = (
-				92193FA21D1CCCD000EEED61 /* CustomCell */,
 				92193FA01D1CCC6000EEED61 /* Controllers */,
 				92193F9F1D1CCC5800EEED61 /* Views */,
 			);
-			name = Home;
+			name = TopTrends;
 			sourceTree = "<group>";
 		};
 		92193F9F1D1CCC5800EEED61 /* Views */ = {
@@ -184,7 +181,8 @@
 		92193FA01D1CCC6000EEED61 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				92193F8D1D19B16A00EEED61 /* HashtagTableViewController.swift */,
+				9237C02B1D2CBD1300E7224F /* ContainerViewController.swift */,
+				9281658B1D81ACE300EBF05D /* TrendCollectionViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -197,18 +195,17 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
-		92193FA21D1CCCD000EEED61 /* CustomCell */ = {
+		921B6C341D9433E2009CAB6A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				92193F9B1D1B782000EEED61 /* HashtagTableViewCell.swift */,
+				921B6C351D9434D7009CAB6A /* InteractViewController.swift */,
 			);
-			name = CustomCell;
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 		9237C0281D2CBC3F00E7224F /* Menu */ = {
 			isa = PBXGroup;
 			children = (
-				9237C02B1D2CBD1300E7224F /* ContainerViewController.swift */,
 				9237C02D1D2E95F100E7224F /* MenuPanelViewController.swift */,
 				9237C0321D3339E500E7224F /* ItemCell.swift */,
 				9237C0341D333B4600E7224F /* MenuItem.swift */,
@@ -232,28 +229,12 @@
 			name = Controllers;
 			sourceTree = "<group>";
 		};
-		92AAD68E1D21DD7F005ECA1C /* Play */ = {
+		92AAD68E1D21DD7F005ECA1C /* InteractTrend */ = {
 			isa = PBXGroup;
 			children = (
-				92AAD6901D21DDB4005ECA1C /* Views */,
-				92AAD68F1D21DDAB005ECA1C /* Controllers */,
+				921B6C341D9433E2009CAB6A /* Controllers */,
 			);
-			name = Play;
-			sourceTree = "<group>";
-		};
-		92AAD68F1D21DDAB005ECA1C /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				92AAD68C1D20DCE6005ECA1C /* HashtagDetailViewController.swift */,
-			);
-			name = Controllers;
-			sourceTree = "<group>";
-		};
-		92AAD6901D21DDB4005ECA1C /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Views;
+			name = InteractTrend;
 			sourceTree = "<group>";
 		};
 		92D3F04A1D35F76100DA9C33 /* Controllers */ = {
@@ -333,13 +314,16 @@
 					92193F551D178DA600EEED61 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = G9KYNT8JLN;
+						LastSwiftMigration = 0800;
 					};
 					92193F691D178DA700EEED61 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = 92193F551D178DA600EEED61;
 					};
 					92193F741D178DA700EEED61 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = 92193F551D178DA600EEED61;
 					};
 				};
@@ -396,14 +380,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92193F9C1D1B782100EEED61 /* HashtagTableViewCell.swift in Sources */,
 				9210021D1D349F9500B6A931 /* AddHashtagViewController.swift in Sources */,
-				92193F8E1D19B16B00EEED61 /* HashtagTableViewController.swift in Sources */,
 				9237C0331D3339E500E7224F /* ItemCell.swift in Sources */,
 				9237C02C1D2CBD1300E7224F /* ContainerViewController.swift in Sources */,
-				92AAD68D1D20DCE6005ECA1C /* HashtagDetailViewController.swift in Sources */,
 				9237C02E1D2E95F100E7224F /* MenuPanelViewController.swift in Sources */,
+				921B6C361D9434D7009CAB6A /* InteractViewController.swift in Sources */,
 				925134F41D375CE1006D3C1A /* WriteNewHashtagViewController.swift in Sources */,
+				9281658C1D81ACE300EBF05D /* TrendCollectionViewController.swift in Sources */,
 				92193F5A1D178DA700EEED61 /* AppDelegate.swift in Sources */,
 				92193F8C1D18B5ED00EEED61 /* Hastag.swift in Sources */,
 				9237C0351D333B4600E7224F /* MenuItem.swift in Sources */,
@@ -555,6 +538,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = mx.com.terco.Tapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -569,6 +553,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = mx.com.terco.Tapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -580,6 +565,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mx.com.terco.TappTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tapp.app/Tapp";
 			};
 			name = Debug;
@@ -592,6 +578,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mx.com.terco.TappTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tapp.app/Tapp";
 			};
 			name = Release;
@@ -603,6 +590,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mx.com.terco.TappUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = Tapp;
 			};
 			name = Debug;
@@ -614,6 +602,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mx.com.terco.TappUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = Tapp;
 			};
 			name = Release;

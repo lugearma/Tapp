@@ -10,47 +10,56 @@ import UIKit
 import QuartzCore
 
 enum MenuPanelState {
-    case MenuExpanded
-    case MenuCollapsed
+    
+    case menuExpanded
+    case menuCollapsed
+    
 }
 
 class ContainerViewController: UIViewController {
-    
-    var hashtagTableNavigationViewController: UINavigationController!
-    var hashatagTableViewController: HashtagTableViewController!
+
+    var trendNavigationViewController: UINavigationController!
+    var trendViewController: TrendCollectionViewController!
     var menuPanelViewController: MenuPanelViewController!
-    let hashtagTablePanelExpandedOffset: CGFloat = 60
-    
-    var currentState: MenuPanelState = .MenuCollapsed {
+    let panelExpandedOffset: CGFloat = 60
+
+    var currentState: MenuPanelState = .menuCollapsed {
         didSet {
-            let shouldShowShadow = currentState != .MenuCollapsed
+            let shouldShowShadow = currentState != .menuCollapsed
             showShadowForCenterViewController(shouldShowShadow)
         }
     }
-    
+
     override func viewDidLoad() {
         
-        self.hashatagTableViewController = UIStoryboard.centerViewController()
-        self.hashatagTableViewController.delegate = self
-        self.hashtagTableNavigationViewController = UINavigationController(rootViewController: self.hashatagTableViewController)
-        view.addSubview(self.hashtagTableNavigationViewController.view)
-        addChildViewController(self.hashtagTableNavigationViewController)
+        let flowLayout = UICollectionViewFlowLayout()
+        flowLayout.sectionInset = UIEdgeInsetsMake(10, 0, 10, 0)
         
-        self.hashtagTableNavigationViewController.didMoveToParentViewController(self)
+        self.trendViewController = TrendCollectionViewController(collectionViewLayout: flowLayout)
+        self.trendViewController.parentView = self
+        self.trendViewController.delegate = self
+        self.trendNavigationViewController = UINavigationController(rootViewController: self.trendViewController)
+        
+        view.addSubview(self.trendNavigationViewController.view)
+        
+        self.trendNavigationViewController.didMove(toParentViewController: self)
     }
 }
 
-extension ContainerViewController: HashtagTableViewControllerDelegate {
-    func togglePanel() {
-        let notAlreadyExpanded = (currentState != .MenuExpanded)
+extension ContainerViewController: TrendCollectionViewControllerDelegate {
+    
+    func toggleLeftPanel() {
+        let notAlreadyExpanded = (currentState != .menuExpanded)
         
         if notAlreadyExpanded {
             addMenuViewController()
         }
+        
         animateMenuPanel(notAlreadyExpanded)
     }
     
     func addMenuViewController() {
+        
         if menuPanelViewController == nil {
             menuPanelViewController = UIStoryboard.menuPanelViewController()
             menuPanelViewController.items = MenuItem.createItems()
@@ -59,53 +68,50 @@ extension ContainerViewController: HashtagTableViewControllerDelegate {
         }
     }
     
-    func addChildMenuPanelViewController(menuPanel: MenuPanelViewController) {
-        view.insertSubview(menuPanel.view, atIndex: 0)
+    func addChildMenuPanelViewController(_ menuPanel: MenuPanelViewController) {
+        view.insertSubview(menuPanel.view, at: 0)
         addChildViewController(menuPanel)
-        menuPanel.didMoveToParentViewController(self)
+        menuPanel.didMove(toParentViewController: self)
     }
     
-    func animateMenuPanel(shouldExpand: Bool) {
+    func animateMenuPanel(_ shouldExpand: Bool) {
+        
         if shouldExpand {
-            currentState = .MenuExpanded
-            animateHashtagTablePanelXPosition(CGRectGetWidth(hashtagTableNavigationViewController.view.frame) - hashtagTablePanelExpandedOffset)
+            currentState = .menuExpanded
+            animateTrendNavigationXPosition(trendViewController.view.frame.width - panelExpandedOffset)
         } else {
-            animateHashtagTablePanelXPosition(0) { finished in
-                self.currentState = .MenuCollapsed
+            animateTrendNavigationXPosition(0) { finished in
+                self.currentState = .menuCollapsed
                 self.menuPanelViewController.view.removeFromSuperview()
                 self.menuPanelViewController = nil
             }
         }
     }
     
-    func animateHashtagTablePanelXPosition(targetPositon: CGFloat, completion: (Bool -> Void)! = nil) {
+    func animateTrendNavigationXPosition(_ targetPositon: CGFloat, completion: ((Bool) -> Void)! = nil) {
         
-        UIView.animateWithDuration(0.5, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .CurveEaseOut, animations: {
-            self.hashtagTableNavigationViewController.view.frame.origin.x = targetPositon
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveLinear, animations: {
+            self.trendNavigationViewController.view.frame.origin.x = targetPositon
             }, completion: completion)
     }
     
     
-    func showShadowForCenterViewController(shouldShowShadow: Bool) {
+    func showShadowForCenterViewController(_ shouldShowShadow: Bool) {
         
         if shouldShowShadow {
-            self.hashtagTableNavigationViewController.view.layer.shadowOpacity = 0.8
+            self.trendViewController.view.layer.shadowOpacity = 0.8
         } else {
-            self.hashtagTableNavigationViewController.view.layer.shadowOpacity = 0.0
+            self.trendViewController.view.layer.shadowOpacity = 0.0
         }
     }
 }
 
 private extension UIStoryboard {
     class func mainStoriboard() -> UIStoryboard {
-        return UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+        return UIStoryboard(name: "Main", bundle: Bundle.main)
     }
     
     class func menuPanelViewController() -> MenuPanelViewController {
-        return (mainStoriboard().instantiateViewControllerWithIdentifier("SidePanelViewController") as? MenuPanelViewController)!
-    }
-    
-    class func centerViewController() -> HashtagTableViewController {
-        return (mainStoriboard().instantiateViewControllerWithIdentifier("HashtagTableViewController") as? HashtagTableViewController)!
+        return (mainStoriboard().instantiateViewController(withIdentifier: "SidePanelViewController") as? MenuPanelViewController)!
     }
 }

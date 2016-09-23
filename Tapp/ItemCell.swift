@@ -13,8 +13,8 @@ class ItemCell: UITableViewCell {
     @IBOutlet weak var itemImage: UIImageView!
     @IBOutlet weak var itemLabel: UILabel!
     
-    func configureCellForItem(item: MenuItem) {
-        self.itemLabel.textColor = UIColor.whiteColor()
+    func configureCellForItem(_ item: MenuItem) {
+        self.itemLabel.textColor = UIColor.white
         self.itemLabel.text = item.itemTitle
         self.itemImage.image = item.itemImage
     }

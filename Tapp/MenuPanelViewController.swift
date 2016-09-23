@@ -9,7 +9,7 @@
 import UIKit
 
 protocol MenuPanelViewControllerDelegate {
-    func itemSelected(item: String)
+    func itemSelected(_ item: String)
 }
 
 class MenuPanelViewController: UIViewController {
@@ -29,28 +29,28 @@ class MenuPanelViewController: UIViewController {
         self.tableView.reloadData()
         self.setupTableView()
         
-        setTableViewBackgroundGradient(UIColor(red: 15/255, green: 30/255, blue: 30/255, alpha: 1.0), UIColor.blackColor())
+        setTableViewBackgroundGradient(UIColor(red: 15/255, green: 30/255, blue: 30/255, alpha: 1.0), UIColor.black)
     }
     
     func setupTableView(){
         self.tableView.delegate = self
         self.tableView.dataSource = self
-        self.tableView.backgroundColor = UIColor.redColor()
+        self.tableView.backgroundColor = UIColor.red
         self.tableView.rowHeight = 70
     }
     
-    func setTableViewBackgroundGradient(topColor: UIColor, _ bottomColor: UIColor) {
+    func setTableViewBackgroundGradient(_ topColor: UIColor, _ bottomColor: UIColor) {
         
-        let gradientBackgroundColors = [topColor.CGColor, bottomColor.CGColor]
+        let gradientBackgroundColors = [topColor.cgColor, bottomColor.cgColor]
         let gradientLocations = [0.0,1.0]
         
         let gradientLayer = CAGradientLayer()
         gradientLayer.colors = gradientBackgroundColors
-        gradientLayer.locations = gradientLocations
+        gradientLayer.locations = gradientLocations as [NSNumber]?
         
         gradientLayer.frame = self.tableView.bounds
         let backgroundView = UIView(frame: self.tableView.bounds)
-        backgroundView.layer.insertSublayer(gradientLayer, atIndex: 0)
+        backgroundView.layer.insertSublayer(gradientLayer, at: 0)
         self.tableView.backgroundView = backgroundView
     }
     
@@ -60,23 +60,23 @@ class MenuPanelViewController: UIViewController {
 
 extension MenuPanelViewController: UITableViewDataSource {
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return (items?.count)!;
     }
     
-    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
-        cell.backgroundColor = UIColor.clearColor()
+    @objc(tableView:willDisplayCell:forRowAtIndexPath:) func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.backgroundColor = UIColor.clear
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(TableView.CellIdentifiers.ItemCell, forIndexPath: indexPath) as! ItemCell
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: TableView.CellIdentifiers.ItemCell, for: indexPath) as! ItemCell
         
-        cell.configureCellForItem(items![indexPath.row])
+        cell.configureCellForItem(items![(indexPath as NSIndexPath).row])
         
         return cell
     }
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1;
     }
     

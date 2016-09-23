@@ -27,7 +27,7 @@ class AddHashtagViewController: UIViewController {
         
         self.textView.delegate = self
         self.textView.text = "Add a new trend"
-        self.textView.textColor = UIColor.lightGrayColor()
+        self.textView.textColor = UIColor.lightGray
         
         self.createButton.backgroundColor = UIColor.mainColor()
         
@@ -42,7 +42,7 @@ class AddHashtagViewController: UIViewController {
     }
     
     func  customToolBar() {
-        let customView = UIView(frame: CGRectMake(0, 0, 10, 50))
+        let customView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 50))
 //        let marker = UIImageView(image: UIImage(named: "marker"))
         let y = customView.frame.height / 2
 //        let x = customView.frame.width / 2
@@ -57,7 +57,7 @@ class AddHashtagViewController: UIViewController {
         self.textView.inputAccessoryView = customView
     }
     
-    func cornerRadius(views: UIView..., radius: CGFloat) {
+    func cornerRadius(_ views: UIView..., radius: CGFloat) {
         for view in views {
             view.layer.cornerRadius = radius
             view.clipsToBounds = true
@@ -75,32 +75,32 @@ class AddHashtagViewController: UIViewController {
     func addnavBar() {
         var itemsArray: [UINavigationItem] = []
         let itemOne = UINavigationItem()
-        itemOne.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "delete"), style: .Plain, target: nil, action: #selector(AddHashtagViewController.hideModalView(_:)))
+        itemOne.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "delete"), style: .plain, target: nil, action: #selector(AddHashtagViewController.hideModalView(_:)))
         itemsArray.append(itemOne)
         
         let width = self.view.frame.width
         let bounds = CGRect(x: 0, y: 0, width: width, height: 70)
         let navBar = UINavigationBar(frame: bounds)
-        navBar.setBackgroundImage(UIImage(), forBarMetrics: .Default)
+        navBar.setBackgroundImage(UIImage(), for: .default)
         navBar.shadowImage = UIImage()
-        navBar.translucent = true
+        navBar.isTranslucent = true
         navBar.tintColor = UIColor(white: 1.0, alpha: 1.0)
         navBar.items = itemsArray
         self.view.addSubview(navBar)
     }
 
-    func hideModalView(sender: UIBarButtonItem) {
-        self.dismissViewControllerAnimated(true, completion: nil)
+    func hideModalView(_ sender: UIBarButtonItem) {
+        self.dismiss(animated: true, completion: nil)
     }
 
-    func setTitleNavbar(title: String) {
+    func setTitleNavbar(_ title: String) {
         self.title = title
     }
 }
 
 extension AddHashtagViewController: UITextViewDelegate {
     
-    func textViewShouldBeginEditing(textView: UITextView) -> Bool {
+    func textViewShouldBeginEditing(_ textView: UITextView) -> Bool {
         
 //        if textView.textColor == UIColor.lightGrayColor() {
 //            textView.text = ""
@@ -110,15 +110,15 @@ extension AddHashtagViewController: UITextViewDelegate {
         return true
     }
     
-    func textViewDidChange(textView: UITextView) {
+    func textViewDidChange(_ textView: UITextView) {
         
         if textView.text == "" {
-            textView.textColor = UIColor.lightGrayColor()
+            textView.textColor = UIColor.lightGray
             textView.text = "Add a new trend"
         }
     }
     
-    func textFieldShouldEndEditing(textField: UITextField) -> Bool {
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
     }
