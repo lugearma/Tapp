@@ -129,6 +129,14 @@ class CustomCell: UICollectionViewCell {
         return imageView
     }()
     
+    var blackView: UIView = {
+        let view = UIView()
+        
+        view.backgroundColor = UIColor.black.withAlphaComponent(0.3)
+        
+        return view
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
     
@@ -142,16 +150,19 @@ class CustomCell: UICollectionViewCell {
     func setupView() {
         
         self.addSubview(backgroundCellImage)
+        self.addSubview(blackView)
         self.addSubview(nameTrendLabel)
         self.addSubview(numberOfTappsLabel)
         
         //Horizontal constraints
         self.addConstraintsWithFormat("H:|-16-[v0]|", views: nameTrendLabel)
         self.addConstraintsWithFormat("H:|-16-[v0]", views: numberOfTappsLabel)
+        self.addConstraintsWithFormat("H:|[v0]|", views: blackView)
         
         //Vertical constraints
         self.addConstraintsWithFormat("V:[v0]-2-[v1]-16-|", views: numberOfTappsLabel, nameTrendLabel)
         self.addConstraintsWithFormat("V:|[v0]|", views: backgroundCellImage)
+        self.addConstraintsWithFormat("V:|[v0]|", views: blackView)
     }
     
     override func layoutSubviews() {
