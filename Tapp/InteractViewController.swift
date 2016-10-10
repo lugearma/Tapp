@@ -55,16 +55,20 @@ class InteractViewController: UIViewController {
 
 extension InteractViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     
-//    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
-//        return UIView()
-//    }
-    
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return "Hola!!!"
+    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+        var arr = [UIView]()
+        let newVIew = UIView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
+        newVIew.backgroundColor = UIColor.red
+        let snewVIew = UIView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
+        snewVIew.backgroundColor = UIColor.black
+        arr.append(newVIew)
+        arr.append(snewVIew)
+        print(row)
+        return arr[row]
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return 6
+        return 2
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
