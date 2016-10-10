@@ -79,8 +79,6 @@ class TrendCollectionViewController: UICollectionViewController {
         let navigationController = UINavigationController(rootViewController: interactView)
         
         parentView.present(navigationController, animated: true, completion: nil)
-//        self.navigationController?.didMove(toParentViewController: nil)
-        
     }
 }
 
@@ -154,12 +152,10 @@ class CustomCell: UICollectionViewCell {
         self.addSubview(nameTrendLabel)
         self.addSubview(numberOfTappsLabel)
         
-        //Horizontal constraints
         self.addConstraintsWithFormat("H:|-16-[v0]|", views: nameTrendLabel)
         self.addConstraintsWithFormat("H:|-16-[v0]", views: numberOfTappsLabel)
         self.addConstraintsWithFormat("H:|[v0]|", views: blackView)
         
-        //Vertical constraints
         self.addConstraintsWithFormat("V:[v0]-2-[v1]-16-|", views: numberOfTappsLabel, nameTrendLabel)
         self.addConstraintsWithFormat("V:|[v0]|", views: backgroundCellImage)
         self.addConstraintsWithFormat("V:|[v0]|", views: blackView)
