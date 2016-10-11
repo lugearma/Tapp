@@ -38,32 +38,38 @@ class InteractViewController: UIViewController {
 
     func setupViews() {
         
+        let screenWidth = self.view.frame.width
+        
         let picker: UIPickerView = {
             let pickerView = UIPickerView()
             pickerView.delegate = self
             pickerView.dataSource = self
-            
-            
-            // Get the superview's layout
-            let margins = pickerView.layoutMarginsGuide
-            
-            // Pin the leading edge of myView to the margin's leading edge
-            pickerView.leadingAnchor.constraint(equalTo: margins.leadingAnchor).isActive = true
-            
-            // Pin the trailing edge of myView to the margin's trailing edge
-            pickerView.trailingAnchor.constraint(equalTo: margins.trailingAnchor).isActive = true
-            
-            // Give myView a 1:2 aspect ratio
-            pickerView.heightAnchor.constraint(equalTo: pickerView.widthAnchor, multiplier: 2.0)
-            
-            
             return pickerView
         }()
         
+        let leftView: UIView = {
+            let lView = UIView(frame: CGRect(x: 0, y: 0, width: screenWidth/2, height: 300))
+            lView.backgroundColor = UIColor.black
+            return lView
+        }()
+        
+        let rightView: UIView = {
+            let rView = UIView(frame: CGRect(x: 200, y: 0, width: screenWidth/2, height: 300))
+            rView.backgroundColor = UIColor.orange
+            return rView
+        }()
+        
+        self.view.addSubview(leftView)
+        self.view.addSubview(rightView)
         self.view.addSubview(picker)
         
+        
+        self.view.addConstraintsWithFormat("H:|[v0(v1)][v1]|", views: leftView, rightView)
         self.view.addConstraintsWithFormat("H:|[v0]|", views: picker)
-        self.view.addConstraintsWithFormat("V:[v0]-32-|", views: picker)
+        
+        self.view.addConstraintsWithFormat("V:|[v0(400)]-8-[v1(400)]-8-[v2]-32-|", views: rightView, leftView, picker)
+        self.view.addConstraintsWithFormat("V:|[v0(400)]", views: rightView)
+        self.view.addConstraintsWithFormat("V:|[v0(400)]", views: leftView)
         
     }
 }
@@ -73,7 +79,6 @@ extension InteractViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
         
         var facesArray = createFacesView()
-//        pickerView.addConstraintsWithFormat("H:|[v0]|", views: facesArray[0])
         return facesArray[row]
     }
     
@@ -84,7 +89,8 @@ extension InteractViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         // TODO: Check how to center element
         for (_, n) in emojisArray.enumerated() {
             
-            let faceLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 150, height: 50))
+            let faceLabel = UILabel()
+//            let faceLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 150, height: 50))
             faceLabel.text = n.0 + "  " + n.1
             faceLabel.font = UIFont.boldSystemFont(ofSize: 50)
             facesArray.append(faceLabel)
@@ -105,5 +111,9 @@ extension InteractViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     
     func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
         return 50
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, widthForComponent component: Int) -> CGFloat {
+        return CGFloat(200.0)
     }
 }
