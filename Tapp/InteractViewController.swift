@@ -42,6 +42,21 @@ class InteractViewController: UIViewController {
             let pickerView = UIPickerView()
             pickerView.delegate = self
             pickerView.dataSource = self
+            
+            
+            // Get the superview's layout
+            let margins = pickerView.layoutMarginsGuide
+            
+            // Pin the leading edge of myView to the margin's leading edge
+            pickerView.leadingAnchor.constraint(equalTo: margins.leadingAnchor).isActive = true
+            
+            // Pin the trailing edge of myView to the margin's trailing edge
+            pickerView.trailingAnchor.constraint(equalTo: margins.trailingAnchor).isActive = true
+            
+            // Give myView a 1:2 aspect ratio
+            pickerView.heightAnchor.constraint(equalTo: pickerView.widthAnchor, multiplier: 2.0)
+            
+            
             return pickerView
         }()
         
@@ -56,22 +71,39 @@ class InteractViewController: UIViewController {
 extension InteractViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
-        var arr = [UIView]()
-        let newVIew = UIView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
-        newVIew.backgroundColor = UIColor.red
-        let snewVIew = UIView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
-        snewVIew.backgroundColor = UIColor.black
-        arr.append(newVIew)
-        arr.append(snewVIew)
-        print(row)
-        return arr[row]
+        
+        var facesArray = createFacesView()
+//        pickerView.addConstraintsWithFormat("H:|[v0]|", views: facesArray[0])
+        return facesArray[row]
+    }
+    
+    private func createFacesView() -> [UIView] {
+        let emojisArray = [("😄", "😞"), ("😂", "😤"), ("❤️", "💔")]
+        var facesArray = [UIView]()
+
+        // TODO: Check how to center element
+        for (_, n) in emojisArray.enumerated() {
+            
+            let faceLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 150, height: 50))
+            faceLabel.text = n.0 + "  " + n.1
+            faceLabel.font = UIFont.boldSystemFont(ofSize: 50)
+            facesArray.append(faceLabel)
+            
+            
+        }
+        
+        return facesArray
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return 2
+        return 3
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
+        return 50
     }
 }
