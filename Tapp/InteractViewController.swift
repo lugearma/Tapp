@@ -18,36 +18,26 @@ class InteractViewController: UIViewController {
     
     var parentView = ContainerViewController()
     var emojiState = EmojiState.topState.rawValue
+    var titleLabel = UILabel()
     
+    var trendTitle = String() {
+        didSet {
+            titleLabel.text = trendTitle
+        }
+    }
     
-//    var titleLabel = String(){
-//        didSet {
-//            self.title = titleLabel
-//        }
-//    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.white
         self.view.isUserInteractionEnabled = true
-//        setupNavigationBarButton()
         self.setupViews()
-        print(emojiState[emojiState.index(before: emojiState.endIndex)])
-        print(emojiState[emojiState.index(emojiState.startIndex, offsetBy: 0)])
-    }
-    
-    func setupNavigationBarButton() {
-        let dismissViewButton = UIBarButtonItem(image: UIImage(named: "delete"), style: UIBarButtonItemStyle.plain, target: self, action: #selector(InteractViewController.dismissView))
-        self.navigationController?.navigationBar.barTintColor = UIColor.white
-        self.navigationItem.setLeftBarButton(dismissViewButton, animated: true)
     }
     
     func dismissView(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
     
-    //TODO: Remove repeated code
-    
+    //TODO: Clean/remove repeated code
     func showEmoji(_ sender: UITapGestureRecognizer) {
         
         let screenHeight = self.view.frame.size.height
@@ -142,20 +132,32 @@ class InteractViewController: UIViewController {
             return button
         }()
         
+        self.titleLabel = {
+            let label = UILabel()
+            label.font = UIFont.boldSystemFont(ofSize: 21)
+            label.textColor = UIColor.black
+            label.text = self.trendTitle
+            label.textAlignment = NSTextAlignment.center
+            return label
+        }()
+        
         self.view.addSubview(leftView)
         self.view.addSubview(rightView)
         self.view.addSubview(picker)
         self.view.addSubview(dissmisModalButton)
+        self.view.addSubview(titleLabel)
         
         
         self.view.addConstraintsWithFormat("H:|[v0(v1)][v1]|", views: leftView, rightView)
         self.view.addConstraintsWithFormat("H:|[v0]|", views: picker)
         self.view.addConstraintsWithFormat("H:|-16-[v0]", views: dissmisModalButton)
+        self.view.addConstraintsWithFormat("H:|-56-[v0]-56-|", views: titleLabel)
         
         self.view.addConstraintsWithFormat("V:|[v0(400)]-8-[v1(400)]-8-[v2]-32-|", views: rightView, leftView, picker)
         self.view.addConstraintsWithFormat("V:|[v0(" + String(describing: screenHeight) + ")]", views: rightView)
         self.view.addConstraintsWithFormat("V:|[v0(" + String(describing: screenHeight) + ")]", views: leftView)
         self.view.addConstraintsWithFormat("V:|-32-[v0]", views: dissmisModalButton)
+        self.view.addConstraintsWithFormat("V:|-32-[v0]", views: titleLabel)
         
     }
 }

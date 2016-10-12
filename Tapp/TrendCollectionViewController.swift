@@ -73,10 +73,8 @@ class TrendCollectionViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let interactView = InteractViewController()
         
-//        interactView.titleLabel = nameOfTrends[indexPath.item]
+        interactView.trendTitle = nameOfTrends[indexPath.item]
         interactView.parentView = parentView
-        
-//        let navigationController = UINavigationController(rootViewController: interactView)
         
         parentView.present(interactView, animated: true, completion: nil)
     }
